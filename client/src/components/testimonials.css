@@ -85,9 +85,9 @@
   z-index: 10;
 }
 
-.carousel-arrow:hover {
+/* .carousel-arrow:hover {
   color: var(--accent-foreground);
-}
+} */
 
 .carousel-arrow.left {
   position: absolute;

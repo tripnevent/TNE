@@ -1,0 +1,170 @@
+/* Global container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.contact-header {
+  background-color: var(--color-muted);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--color-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+  font-size: 1.125rem;
+  color: var(--color-muted-foreground);
+}
+
+/* Grid Layout */
+.contact-main {
+  padding: 5rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Form Styles */
+.contact-form h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-foreground);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: rgba(var(--color-accent-rgb), 0.9);
+}
+
+/* Contact Info */
+.contact-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-foreground);
+}
+
+.info-block {
+  margin-bottom: 1.5rem;
+}
+
+.info-block h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-foreground);
+}
+
+.info-block a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.info-block a:hover {
+  color: rgba(var(--color-accent-rgb), 0.8);
+}
+
+.info-block p {
+  color: var(--color-muted-foreground);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: var(--color-accent);
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.why-choose-us h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent-foreground);
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.why-choose-us li {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  color: var(--color-accent-foreground);
+  font-size: 1rem;
+}
+
+.why-choose-us .cta-btn {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose-us h3 {
+    font-size: 1.75rem;
+  }
+}

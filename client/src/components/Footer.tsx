@@ -1,11 +1,15 @@
+import CertifiedSection from './CertifiedSection';
 import './footer.css';
 import { useLocation } from 'wouter';
+import MapComponent from './MapComponent';
 
 export default function Footer() {
   const [, navigate] = useLocation();
 
   return (
     <footer className="footer">
+      <MapComponent />
+      <CertifiedSection />
       <div className="footer-container">
         <div className="footer-grid">
           {/* Brand */}
@@ -44,10 +48,12 @@ export default function Footer() {
             <h4 className="footer-heading">Contact</h4>
             <ul className="footer-list">
               <li>
-                <a href="mailto:info@tripandevent.com">info@tripandevent.com</a>
+                <a href="mailto:hello@tripandevent.com">
+                  hello@tripandevent.com
+                </a>
               </li>
               <li>
-                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href="tel:+91 900 700 0777">+91 900 700 0777</a>
               </li>
               <li>
                 <button

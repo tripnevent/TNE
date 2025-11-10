@@ -171,22 +171,22 @@
   padding: 0.5rem 1rem;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
-  background-color: var(--accent);
-  color: var(--accent-foreground);
+  background-color: var(--accent-foreground);
+  color: var(--foreground);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .destination-button:hover {
-  background-color: rgba(55, 125, 255, 0.9);
+  background-color: rgba(131, 15, 15, 0.9);
   transform: translateY(-2px);
 }
 
 /* CTA Section */
 .destinations-cta-section {
   padding: 4rem 1rem;
-  background-color: var(--muted);
+  background-color: var(--color-primary);
   text-align: center;
 }
 
@@ -200,7 +200,7 @@
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 2rem;
-  color: var(--foreground);
+  color: var(--color-primary-foreground);
   margin-bottom: 1.5rem;
 }
 
@@ -218,7 +218,7 @@
 
 .destinations-cta-text {
   font-size: 1rem;
-  color: var(--muted-foreground);
+  color: var(--color-primary-foreground);
   margin-bottom: 2rem;
 }
 

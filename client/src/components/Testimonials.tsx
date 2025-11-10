@@ -3,29 +3,33 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./testimonials.css";
 
 export default function Testimonials() {
-  const testimonialData = [
-    {
-      text: `The overall experience with Trip and Events was a fantastic and amazing journey.
-      We had so much fun, created a lot of great memories. We visited Abu Dhabi and Dubai,
-      Ferrari World, Yas Island, Water World, and so many memories that we have created to
-      cherish forever. My experience with Trip and Events was the best ever. Thank you so much
-      Trip and Events for this wonderful experience. We will definitely choose you next time as well.`,
-      name: "Happy Couple from India",
-      img: "/images/testimonial1.jpg",
-    },
-    {
-      text: `Our pre-wedding shoot was magical! The team captured every moment beautifully, and
-      the cinematic style made it unforgettable. Highly recommend Trip and Event for any special journey.`,
-      name: "Priya & Raj",
-      img: "/images/testimonial2.jpg",
-    },
-    {
-      text: `The group adventure package exceeded all our expectations. From planning to execution,
-      everything was smooth, fun, and cinematic. Loved every moment!`,
-      name: "Adventure Group",
-      img: "/images/testimonial3.jpg",
-    },
-  ];
+
+
+
+ const testimonialData = [
+  {
+    text: `Our journey with Trip and Events was absolutely amazing. We visited Abu Dhabi and Dubai,
+    exploring Ferrari World, Yas Island, and Water World. Every moment was fun and memorable.
+    The team made the entire experience smooth and enjoyable. We will definitely choose Trip and Events again.`,
+    name: "Happy Couple from India",
+    img: "/images/testimonial1.jpg",
+  },
+  {
+    text: `Our pre-wedding shoot was truly magical! Every moment was captured beautifully in a cinematic style,
+    making it unforgettable. The Trip and Events team ensured everything went smoothly, and the entire experience
+    was fun and memorable. Highly recommended for special journeys.`,
+    name: "Priya & Raj",
+    img: "/images/testimonial2.jpg",
+  },
+  {
+    text: `The group adventure package exceeded our expectations. From planning to execution, everything was smooth
+    and enjoyable. Every moment was fun, memorable, and cinematic. The Trip and Events team made the experience
+    seamless and truly remarkable.`,
+    name: "Adventure Group",
+    img: "/images/testimonial3.jpg",
+  },
+];
+
 
   const [current, setCurrent] = useState(0);
 

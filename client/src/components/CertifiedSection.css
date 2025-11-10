@@ -1,0 +1,81 @@
+/* Section */
+.certified-section {
+  width: 100%;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logos Container */
+.certified-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Single Logo Item */
+.certified-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 180px;
+}
+
+.certified-logo-item img {
+  width: 60%;
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
+.rounded-logo img {
+  border-radius: 0.5rem;
+}
+
+.invert-logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* Labels */
+.logo-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.logo-label.india-text {
+  color: #f59e0b; /* amber-400 */
+}
+
+.logo-label.small-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Badges */
+.certified-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge-icon {
+  color: #f59e0b; /* amber-400 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

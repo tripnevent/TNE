@@ -102,6 +102,7 @@ export default function Yacht() {
         </div>
       </section>
 
+      
       <Footer />
     </div>
   );
