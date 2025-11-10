@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://tripandevent.com/sitemap.xml
+
+# Disallow admin or internal pages if any
+# Disallow: /admin/
