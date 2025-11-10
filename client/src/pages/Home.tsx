@@ -6,7 +6,6 @@ import Hero from "@/components/Hero";
 import AboutTravel from "@/components/AboutTravel";
 import FeaturedExperiences from "@/components/FeaturedExperiences";
 import TrendingDestinations from "@/components/TrendingDestinations";
-import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
@@ -32,7 +31,6 @@ export default function Home() {
       <TrendingDestinations  />
 
       {/* How It Works Section */}
-      <HowItWorks />
 
       {/* Testimonials Section */}
       <Testimonials />
