@@ -165,6 +165,9 @@
     padding: 1.5rem;
     min-height: 320px;
   }
+  .testimonials{
+    padding: 5rem 2rem;
+  }
 
   .testimonial-text-box {
     font-size: 0.95rem;

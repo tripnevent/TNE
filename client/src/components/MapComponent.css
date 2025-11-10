@@ -37,6 +37,15 @@
   .map-grid {
     grid-template-columns: 1fr 1fr;
   }
+  
+}
+
+@media (max-width: 668px) {
+  .map-grid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .office-card {

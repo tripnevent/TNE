@@ -92,10 +92,6 @@
   transition: background-color 0.3s ease;
 }
 
-.navbar-cta button:hover {
-  background-color: rgba(55, 125, 255, 0.9);
-}
-
 @media (min-width: 768px) {
   .navbar-cta {
     display: block;
@@ -135,7 +131,9 @@
   left: 0;
   width: 100%;
   z-index: 40;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
   overflow: hidden;
 }
 
@@ -186,7 +184,9 @@
 .navbar-mobile-enter-active {
   max-height: 500px; /* adjust if menu has many items */
   opacity: 1;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .navbar-mobile-exit {
@@ -197,5 +197,7 @@
 .navbar-mobile-exit-active {
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
 }

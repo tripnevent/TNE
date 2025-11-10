@@ -77,3 +77,10 @@
 .cta-button-outline:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+
+@media (max-width: 640px) {
+ .cta-section {
+    padding: 4rem 2rem; /* py-16 = 4rem, px-2 = 0.5rem */
+  }
+}
