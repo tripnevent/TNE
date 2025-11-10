@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
 import './experiences.css';
+import Headeruse from '@/components/ui/Headeruse';
 
 export default function Experiences() {
   const [, navigate] = useLocation();
@@ -61,12 +62,12 @@ export default function Experiences() {
       <Navigation />
 
       {/* Header */}
-      <section className="experiences-header-section">
-        <div className="max-w-6xl mx-auto">
-          <h1>Featured Experiences</h1>
-          <p>Cinematic travel packages crafted for your unique story</p>
-        </div>
-      </section>
+      <Headeruse
+        title="Featured Experiences"
+        subtitle="Cinematic travel packages crafted for your unique story"
+        backgroundColor="#000000"
+        textColor="#ffffff"
+      />
 
       {/* Experiences Grid */}
       <section className="experiences-grid-section">
@@ -102,7 +103,7 @@ export default function Experiences() {
         </p>
         <button
           className="experience-button"
-          style={{ width: "300px" , margin: "0 auto" , borderRadius: "8px" }}
+          style={{ width: '300px', margin: '0 auto', borderRadius: '8px' }}
           onClick={() => navigate('/contact')}
         >
           Discuss Your Idea
@@ -113,5 +114,3 @@ export default function Experiences() {
     </div>
   );
 }
-
-

@@ -35,7 +35,7 @@
 /* Logo */
 .navbar-logo {
   font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-weight: tiny;
   font-size: 1.5rem; /* text-2xl */
   color: var(--foreground);
   cursor: pointer;
@@ -51,7 +51,7 @@
 
 .navbar-link {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: tiny;
   font-size: 0.875rem; /* text-sm */
   text-transform: uppercase;
   letter-spacing: 0.05em;

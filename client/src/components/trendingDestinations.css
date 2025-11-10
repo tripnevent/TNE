@@ -12,8 +12,8 @@
 
 /* Header */
 .trending-destinations-header {
-  text-align: center;
-  margin-bottom: 4rem; /* mb-16 */
+  text-align: left;
+  margin-bottom: 2rem; /* mb-16 */
 }
 
 .trending-destinations-title {
@@ -21,7 +21,6 @@
   font-weight: 700;
   font-size: 2.25rem; /* text-4xl */
   color: var(--foreground);
-  margin-bottom: 1rem; /* mb-4 */
 }
 
 @media (min-width: 768px) {
@@ -93,7 +92,7 @@
 .destination-tagline {
   font-family: 'Inter', sans-serif;
   color: var(--muted-foreground);
-  margin-bottom: 1rem; /* mb-4 */
+  
 }
 
 .destination-info {

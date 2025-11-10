@@ -10,10 +10,10 @@ export default function Hero({}: HeroProps) {
     <section className="hero">
       <div className="hero-container">
         <p className="hero-subtitle">Welcome to Trip & Event</p>
-        <h1 className="hero-title">Celebrate the Journey</h1>
-        <p className="hero-description">
+        <h1 className="hero-title">CELEBRATE THE JOURNY</h1>
+        {/* <p className="hero-description">
           Cinematic Travel Experiences That Last Forever
-        </p>
+        </p> */}
         <div className="hero-buttons">
           <button
             className="hero-button hero-button-primary"

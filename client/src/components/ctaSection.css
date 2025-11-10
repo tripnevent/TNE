@@ -1,7 +1,7 @@
 /* CTA Section */
 .cta-section {
   padding: 5rem 6rem; /* py-20 = 5rem, px-4 = 1rem */
-  background-color: var(--accent);
+  background-color: var(--color-black);
   color: var(--accent-foreground);
   text-align: center;
 }

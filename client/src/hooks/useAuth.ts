@@ -50,3 +50,8 @@ export function useAuth(options?: UseAuthOptions) {
     logout,
   };
 }
+
+
+
+
+// === Example usage of useAuth in a component ===
