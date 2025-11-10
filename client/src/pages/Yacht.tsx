@@ -44,8 +44,8 @@ export default function Yacht() {
       </section>
 
       {/* Yacht Cards */}
-      <section className="py-20 px-4 bg-background">
-        <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-3">
+      <section className="py-20 px-6 bg-background">
+        <div className="max-w-6xl mx-auto grid gap-4 md:grid-cols-3">
           {yachts.map((yacht, idx) => (
             <div
               key={idx}
