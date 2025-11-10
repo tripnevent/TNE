@@ -34,19 +34,11 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       toast.success("Quote request sent successfully! We'll contact you soon.");
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        destination: '',
-        date: '',
-        message: '',
-      });
-    } catch (error) {
+      setFormData({ name: '', email: '', phone: '', destination: '', date: '', message: '' });
+    } catch {
       toast.error('Failed to send quote request. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -57,7 +49,7 @@ export default function Contact() {
     <div className="contact-page">
       <Navigation />
 
-      {/* Page Header */}
+      {/* Header */}
       <section className="contact-header">
         <div className="container">
           <h1>Get in Touch</h1>
@@ -65,8 +57,8 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form + Info */}
-      <section className="contact-main container">
+      {/* Form + Info */}
+      <section className="contact-main-container">
         <div className="contact-grid">
           {/* Form */}
           <div className="contact-form">
@@ -74,62 +66,27 @@ export default function Contact() {
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label>Full Name</label>
-                <Input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your name"
-                  required
-                />
+                <Input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
               </div>
-
               <div className="form-group">
                 <label>Email Address</label>
-                <Input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="your@email.com"
-                  required
-                />
+                <Input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required />
               </div>
-
               <div className="form-group">
                 <label>Phone Number</label>
-                <Input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="+91 98765 43210"
-                  required
-                />
+                <Input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 98765 43210" required />
               </div>
-
               <div className="form-group">
                 <label>Message</label>
-                <Textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your cinematic travel vision..."
-                  rows={5}
-                />
+                <Textarea name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your cinematic travel vision..." rows={5} />
               </div>
-
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="submit-btn"
-              >
+              <Button type="submit" disabled={isSubmitting} className="submit-btn">
                 {isSubmitting ? 'Sending...' : 'Send Quote Request'}
               </Button>
             </form>
           </div>
 
-          {/* Contact Info */}
+          {/* Info */}
           <div className="contact-info">
             <h2>Contact Information</h2>
             <div className="info-block">
@@ -142,28 +99,20 @@ export default function Contact() {
             </div>
             <div className="info-block">
               <h3>WhatsApp</h3>
-              <a
-                href="https://wa.me/+919007000777"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Chat on WhatsApp
-              </a>
+              <a href="https://wa.me/+919007000777" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
             </div>
             <div className="info-block">
               <h3>Office Hours</h3>
               <p>
-                Monday - Friday: 9:00 AM - 6:00 PM
-                <br />
-                Saturday: 10:00 AM - 4:00 PM
-                <br />
+                Monday - Friday: 9:00 AM - 6:00 PM<br />
+                Saturday: 10:00 AM - 4:00 PM<br />
                 Sunday: Closed
               </p>
             </div>
           </div>
         </div>
 
-        {/* Why Choose Us Section */}
+        {/* Why Choose Us */}
         <div className="why-choose-us">
           <h3>Why Choose Us?</h3>
           <ul>
@@ -173,9 +122,7 @@ export default function Contact() {
             <li>✓ Dedicated team for your journey</li>
           </ul>
           <div className="cta-btn">
-            <Button size="lg" onClick={() => navigate('/contact')}>
-              Request Your Quote
-            </Button>
+            <Button size="lg" onClick={() => navigate('/contact')}>Request Your Quote</Button>
           </div>
         </div>
       </section>

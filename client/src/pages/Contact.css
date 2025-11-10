@@ -5,6 +5,10 @@
   padding: 0 1rem;
 }
 
+.contact-main-container{
+
+}
+
 /* Header */
 .contact-header {
   background-color: var(--color-muted);
@@ -31,7 +35,11 @@
 
 .contact-grid {
   display: grid;
-  gap: 2rem;
+  gap: 10rem;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
 @media (min-width: 768px) {
@@ -123,7 +131,6 @@
   margin-top: 4rem;
   padding: 2rem;
   background-color: var(--color-accent);
-  border-radius: 0.75rem;
   text-align: center;
 }
 
@@ -152,6 +159,11 @@
 
 .why-choose-us .cta-btn {
   text-align: center;
+}
+
+.cta-btn button {
+  background-color: white;
+  color: var(--color-red-900);
 }
 
 /* Responsive */

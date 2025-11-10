@@ -169,6 +169,7 @@
 /* Card Button */
 .experience-button {
   width: 100%;
+  margin-top: auto;
   padding: 0.5rem 1rem;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
