@@ -1,0 +1,228 @@
+/* ==============================
+   Destinations Page
+   ============================== */
+
+/* Global Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Outer Page */
+.destinations-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.destinations-header-section {
+  padding: 4rem 1rem;
+  background-color: var(--muted);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .destinations-header-section {
+    padding: 4rem 2rem;
+  }
+}
+
+.destinations-header-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .destinations-header-section h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .destinations-header-section h1 {
+    font-size: 4rem;
+  }
+}
+
+.destinations-header-section p {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+@media (min-width: 768px) {
+  .destinations-header-section p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Grid Section */
+.destinations-grid-section {
+  flex: 1;
+  padding: 4rem 1rem;
+  background-color: var(--background);
+}
+
+@media (min-width: 640px) {
+  .destinations-grid-section {
+    padding: 5rem 2rem;
+  }
+}
+
+.destinations-grid-container {
+  max-width: 96rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .destinations-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .destinations-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Individual Card */
+.destination-card {
+  background-color: var(--card);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Image Section */
+.destination-image {
+  background-color: var(--muted);
+  height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.destination-image-text {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  padding: 0 0.5rem;
+}
+
+/* Content Section */
+.destination-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.destination-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.destination-tagline,
+.destination-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.destination-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.destination-price {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Card Button */
+.destination-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.destination-button:hover {
+  background-color: rgba(55, 125, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* CTA Section */
+.destinations-cta-section {
+  padding: 4rem 1rem;
+  background-color: var(--muted);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .destinations-cta-section {
+    padding: 5rem 2rem;
+  }
+}
+
+.destinations-cta-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .destinations-cta-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .destinations-cta-title {
+    font-size: 3rem;
+  }
+}
+
+.destinations-cta-text {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+}
+
+.destinations-cta-section .destination-button {
+  max-width: 300px;
+  margin: 0 auto;
+}

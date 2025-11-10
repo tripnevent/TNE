@@ -1,0 +1,90 @@
+/* Footer Styles */
+.footer {
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 3rem 1rem; /* py-12 px-4 */
+  font-family: 'Inter', sans-serif;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 96rem; /* max-w-6xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid for links */
+.footer-grid {
+  display: grid;
+  gap: 2rem; /* gap-8 */
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr); /* md:grid-cols-4 */
+  }
+}
+
+/* Brand */
+.footer-brand h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.25rem; /* text-xl */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.footer-brand p {
+  font-size: 0.875rem; /* text-sm */
+  opacity: 0.8;
+}
+
+/* Headings */
+.footer-heading {
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+/* List Items */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem; /* space-y-2 handled */
+}
+
+.footer-list li button,
+.footer-list li a {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.875rem; /* text-sm */
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  padding: 0;
+}
+
+.footer-list li button:hover,
+.footer-list li a:hover {
+  opacity: 0.8;
+}
+
+.footer-list li .get-in-touch {
+  font-weight: 600;
+  padding-top: 0.5rem; /* pt-2 */
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* border-background/20 */
+  padding-top: 2rem; /* pt-8 */
+  text-align: center;
+  font-size: 0.875rem; /* text-sm */
+  opacity: 0.75;
+}

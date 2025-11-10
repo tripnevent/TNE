@@ -1,0 +1,97 @@
+/* How It Works Section */
+.how-it-works {
+  padding: 5rem 6rem; /* py-20 = 5rem, px-4 = 1rem */
+  background-color: var(--muted);
+}
+
+.how-it-works-container {
+  max-width: 96rem; /* max-w-6xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header */
+.how-it-works-header {
+  text-align: center;
+  margin-bottom: 4rem; /* mb-16 */
+}
+
+.how-it-works-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.25rem; /* text-4xl */
+  color: var(--foreground);
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+@media (min-width: 768px) {
+  .how-it-works-title {
+    font-size: 3rem; /* md:text-5xl */
+  }
+}
+
+.how-it-works-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem; /* text-lg */
+  color: var(--muted-foreground);
+}
+
+/* Steps Grid */
+.how-it-works-grid {
+  display: grid;
+  gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+  .how-it-works-grid {
+    grid-template-columns: repeat(4, 1fr); /* md:grid-cols-4 */
+  }
+}
+
+/* Individual Step */
+.how-it-works-step {
+  text-align: center;
+}
+
+.how-it-works-step-number {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3rem; /* text-5xl */
+  color: var(--accent);
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.how-it-works-step-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.25rem; /* text-xl */
+  color: var(--foreground);
+  margin-bottom: 0.75rem; /* mb-3 */
+}
+
+.how-it-works-step-desc {
+  font-family: 'Inter', sans-serif;
+  color: var(--muted-foreground);
+}
+
+/* CTA Button */
+.how-it-works-cta {
+  text-align: center;
+  margin-top: 3rem; /* mt-12 */
+}
+
+.how-it-works-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 2rem; /* px-8 */
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.how-it-works-button:hover {
+  background-color: rgba(55, 125, 255, 0.9); /* hover:bg-accent/90 */
+}
