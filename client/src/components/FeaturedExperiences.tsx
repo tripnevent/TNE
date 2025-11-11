@@ -6,16 +6,22 @@ const experiences = [
     title: "Music Album Trip",
     description: "Create your personal music video while traveling to exotic destinations",
     duration: "5 Nights / 6 Days",
+    video: "/music-album.mp4", // local mp4
+    type: "video", // "video" | "youtube"
   },
   {
     title: "Pre-Wedding Shoot",
     description: "Cinematic pre-wedding films in the most romantic locations",
     duration: "5 Nights / 6 Days",
+    video: "/pre-wedding.mp4",
+    type: "video",
   },
   {
     title: "Group Adventure",
     description: "Epic group adventures captured in stunning cinematic style",
     duration: "5 Nights / 6 Days",
+    video: "https://www.youtube.com/embed/J1Y5QXAsp3Y?si=gfE_lXZjNHoACdd9",
+    type: "youtube",
   },
 ];
 
@@ -36,7 +42,26 @@ export default function FeaturedExperiences() {
           {experiences.map((exp, idx) => (
             <div key={idx} className="featured-experience-card">
               <div className="featured-experience-image">
-                <p className="featured-experience-image-text">Experience Image</p>
+                {exp.type === "video" ? (
+                  <video
+                    src={exp.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="featured-experience-video"
+                  />
+                ) : (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={exp.video}
+                    title={exp.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                )}
               </div>
               <div className="featured-experience-content">
                 <h3 className="featured-experience-title">{exp.title}</h3>
