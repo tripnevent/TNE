@@ -51,8 +51,8 @@
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   padding: 0.5rem 2rem; /* px-8 */
-  background-color: var(--accent-foreground);
-  color: var(--accent);
+  background-color: var(--accent);
+  color: var(--color-white);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
