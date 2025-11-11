@@ -1,14 +1,9 @@
 /* Featured Experiences Section */
 .featured-experiences {
-  padding: 5rem 1rem !important; /* smaller side padding for mobile */
+  padding: 1rem 1rem !important; /* smaller side padding for mobile */
   background-color: var(--color-black);
 }
 
-@media (min-width: 640px) {
-  .featured-experiences {
-    padding: 5rem 2rem !important; /* restore default for sm+ */
-  }
-}
 
 .featured-experiences-container {
   max-width: 96rem;
@@ -19,7 +14,7 @@
 
 /* Header */
 .featured-experiences-header {
-  text-align: right;
+  text-align: left;
   margin-bottom: 2rem;
 }
 
@@ -114,13 +109,15 @@
 /* Card Content */
 .featured-experience-content {
   padding: 1.25rem;
+  margin-top: auto !important;
+  background-color: var(--color-black);
 }
 
 .featured-experience-title {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--color-black);
+  color: var(--color-white);
   margin-bottom: 0.5rem;
 }
 

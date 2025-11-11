@@ -14,7 +14,7 @@
     display: flex;
     justify-content: flex-end; /* Push content to the right */
     align-items: flex-end; /* Push content to the bottom */
-    padding: 50px; /* Padding from the edges */
+    padding: 10px; /* Padding from the edges */
     text-align: right;
 }
 

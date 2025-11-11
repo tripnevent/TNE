@@ -16,7 +16,6 @@ export default function TrendingDestinations() {
   return (
     <section className="trending-destinations">
       <div className="trending-destinations-container">
-        {/* Header */}
         <div className="trending-destinations-header">
           <h2 className="trending-destinations-title">Trending Destinations</h2>
           <p className="trending-destinations-subtitle">
@@ -24,7 +23,6 @@ export default function TrendingDestinations() {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="trending-destinations-grid">
           {destinations.map((dest, idx) => (
             <div
