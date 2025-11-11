@@ -88,16 +88,10 @@
   color: var(--accent-foreground);
 }
 
-.hero-button-primary:hover {
-  background-color: rgba(55, 125, 255, 0.9); /* approximate hover */
-}
+
 
 .hero-button-outline {
   background: transparent;
   border: 1px solid var(--accent);
   color: var(--accent);
-}
-
-.hero-button-outline:hover {
-  background-color: rgba(55, 125, 255, 0.1);
 }
