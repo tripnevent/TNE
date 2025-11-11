@@ -20,8 +20,8 @@ const experiences = [
     title: "Group Adventure",
     description: "Epic group adventures captured in stunning cinematic style for unforgettable memories",
     duration: "5 Nights / 6 Days",
-    video: "https://www.youtube.com/embed/J1Y5QXAsp3Y?si=gfE_lXZjNHoACdd9",
-    type: "youtube",
+    video: "/pre-wedding.mp4",
+    type: "video",
   },
 ];
 

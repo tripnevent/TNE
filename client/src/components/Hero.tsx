@@ -1,43 +1,37 @@
-import { useLocation } from 'wouter';
-import './hero.css';
+import { useLocation } from "wouter";
+import "./hero.css";
 
-interface HeroProps {}
-
-export default function Hero({}: HeroProps) {
+export default function Hero() {
   const [location, navigate] = useLocation();
+
+  // Function to handle button click, will navigate to a placeholder route
+  const handleButtonClick = () => {
+    // In a real application, this would navigate to the start of the journey/booking page
+    console.log("Navigating to start journey...");
+    // navigate("/start-journey"); // Placeholder navigation
+  };
 
   return (
     <section className="hero">
-      {/* Video Background */}
-      <video
-        className="hero-video"
-        src="/hero.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
+      {/* Animated Grain Overlay */}
+      <div className="grain-overlay"></div>
 
       <div className="hero-container">
-        <h1 className="hero-title">CELEBRATE THE JOURNY</h1>
-        <p className="hero-subtitle">Welcome to Trip & Event</p>
+        <h1 className="hero-title">TRIP AND EVENT</h1>
+        <p className="hero-subtitle">CURATED LUXURY TRAVEL EXPERIENCES</p>
 
         <div className="hero-buttons">
-          {/* <button
-          style={{ backgroundColor: 'white' }}
-            className="hero-button hero-button-primary"
-            onClick={() => navigate('/destinations')}
-          >
-            Explore Packages
-          </button> */}
           <button
             className="hero-button hero-button-outline"
-            style={{ color: 'white', borderColor: 'white' }}
-            onClick={() => navigate('/experiences')}
+            onClick={handleButtonClick}
           >
-            Discover CineTrip
+            START YOUR JOURNEY
           </button>
         </div>
+      </div>
+
+      <div className="hero-scroll-indicator">
+        SCROLL TO EXPLORE
       </div>
     </section>
   );

@@ -98,7 +98,6 @@
 /* Individual Card */
 .destination-card {
   background-color: var(--card);
-  border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -130,6 +129,7 @@
 /* Content Section */
 .destination-content {
   padding: 1.5rem;
+  background-color: var(--color-black);
   display: flex;
   flex-direction: column;
   flex: 1;
