@@ -10,7 +10,8 @@
 }
 
 .hero-container {
-  max-width: 64rem; /* max-w-4xl = 64rem */
+  max-width: 64rem;
+  height: 34rem; /* max-w-4xl = 64rem */
   margin-left: auto;
   margin-right: auto;
 }
