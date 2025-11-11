@@ -47,7 +47,7 @@ export default function Yacht() {
       {/* Hero Section */}
       <section className="yacht-hero">
         <div className="hero-content">
-          <h1 className="hero-title">Yacht Experiences</h1>
+          <h1 className="yacht-hero-title">Yacht Experiences</h1>
           <p className="hero-subtitle">
             Discover luxury, adventure, and romance on the water
           </p>
