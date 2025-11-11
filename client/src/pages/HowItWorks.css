@@ -63,7 +63,7 @@
   font-size: 4rem;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  color: #c2a878;
+  color: #ffffff !important;
   opacity: 0.2;
   margin-bottom: 15px;
 }
@@ -71,7 +71,7 @@
 .step-text h2 {
   font-size: 2rem;
   font-family: 'Playfair Display', serif;
-  color: #111;
+  color: #d6d6d6;
   margin-bottom: 10px;
 }
 
@@ -132,7 +132,6 @@
   opacity: 0.9;
   margin-bottom: 30px;
 }
-
 
 /* Responsive */
 @media (max-width: 768px) {
