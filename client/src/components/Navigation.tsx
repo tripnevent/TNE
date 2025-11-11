@@ -45,9 +45,7 @@ export default function Navigation() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="navbar-cta">
-          <Button onClick={() => navigate('/contact')}>Get Quote</Button>
-        </div>
+
 
         {/* Mobile Menu Button */}
         <div className="navbar-menu-button" onClick={() => setIsOpen(!isOpen)}>
