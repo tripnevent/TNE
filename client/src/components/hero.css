@@ -34,9 +34,20 @@
   margin-bottom: 1.5rem; /* mb-6 */
 }
 
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 3rem !important; /* text-4xl */
+    line-height: 4rem; /* leading-snug */
+    letter-spacing: 0.2rem !important;
+  }
+  .hero{
+    padding: 6rem 1rem; /* py-24 = 6rem, px-4 = 1rem */
+  }
+}
+
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 4.5rem; /* md:text-7xl */
+    font-size: 4rem; /* md:text-7xl */
   }
 }
 
