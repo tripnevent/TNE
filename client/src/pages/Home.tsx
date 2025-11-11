@@ -9,6 +9,7 @@ import TrendingDestinations from "@/components/TrendingDestinations";
 import Testimonials from "@/components/Testimonials";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import Favplace from "@/components/Favplace";
 
 export default function Home() {
   const [, navigate] = useLocation();
@@ -29,6 +30,8 @@ export default function Home() {
 
       {/* Trending Destinations Section */}
       <TrendingDestinations  />
+
+      <Favplace />
 
       {/* How It Works Section */}
 
