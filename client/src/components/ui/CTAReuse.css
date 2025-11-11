@@ -61,7 +61,7 @@
 
 /* ===== Button ===== */
 .cta-button {
-  background-color: var(--primary) !important;
+  background-color: var(--color-red-900) !important;
   color: #fff !important;
   border: none;
   border-radius: 2rem;
