@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
+import CTAReuse from '@/components/ui/CTAReuse';
 import './Yacht.css';
 
 export default function Yacht() {
@@ -85,22 +86,13 @@ export default function Yacht() {
       </section>
 
       {/* CTA Section */}
-      <section className="yacht-cta">
-        <div className="cta-content">
-          <h2 className="cta-title">Ready to Sail in Style?</h2>
-          <p className="cta-text">
-            Choose your perfect yacht experience and let us craft an
-            unforgettable journey.
-          </p>
-          <Button
-            size="lg"
-            onClick={() => navigate('/contact')}
-            className="cta-btn"
-          >
-            Get Your Private Yacht
-          </Button>
-        </div>
-      </section>
+    <CTAReuse
+  title="Ready to Sail in Style?"
+  text="Choose your perfect yacht experience and let us craft an unforgettable journey."
+  buttonText="Get Your Private Yacht"
+  buttonLink="/contact"
+/>
+
 
       <Footer />
     </div>

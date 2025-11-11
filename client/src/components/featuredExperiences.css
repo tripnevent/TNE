@@ -160,11 +160,6 @@
   border-radius: 0.375rem;
 }
 
-.featured-experience-button:hover {
-  background-color: rgba(55, 125, 255, 0.1);
-  transform: translateY(-2px);
-}
-
 /* Responsive Padding for Large Screens */
 @media (min-width: 1024px) {
   .featured-experiences {
