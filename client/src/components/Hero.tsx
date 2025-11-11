@@ -1,5 +1,5 @@
-import { useLocation } from "wouter";
-import "./hero.css";
+import { useLocation } from 'wouter';
+import './hero.css';
 
 interface HeroProps {}
 
@@ -9,21 +9,22 @@ export default function Hero({}: HeroProps) {
   return (
     <section className="hero">
       <div className="hero-container">
-        <p className="hero-subtitle">Welcome to Trip & Event</p>
         <h1 className="hero-title">CELEBRATE THE JOURNY</h1>
+        <p className="hero-subtitle">Welcome to Trip & Event</p>
+
         {/* <p className="hero-description">
           Cinematic Travel Experiences That Last Forever
         </p> */}
         <div className="hero-buttons">
           <button
             className="hero-button hero-button-primary"
-            onClick={() => navigate("/destinations")}
+            onClick={() => navigate('/destinations')}
           >
             Explore Packages
           </button>
           <button
             className="hero-button hero-button-outline"
-            onClick={() => navigate("/experiences")}
+            onClick={() => navigate('/experiences')}
           >
             Discover CineTrip
           </button>
