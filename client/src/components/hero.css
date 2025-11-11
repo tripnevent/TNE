@@ -13,7 +13,6 @@
   max-width: 64rem; /* max-w-4xl = 64rem */
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1rem; /* px-4 = 1rem */
 }
 
 .hero-subtitle {
@@ -95,3 +94,4 @@
   border: 1px solid var(--accent);
   color: var(--accent);
 }
+

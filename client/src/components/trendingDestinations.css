@@ -1,11 +1,17 @@
 /* Trending Destinations Section */
 .trending-destinations {
-  padding: 5rem 2rem; /* py-20 = 5rem, px-4 = 1rem */
+  padding: 5rem 1rem; /* smaller padding for mobile */
   background-color: var(--background);
 }
 
+@media (min-width: 640px) {
+  .trending-destinations {
+    padding: 5rem 2rem; /* restore for sm+ */
+  }
+}
+
 .trending-destinations-container {
-  max-width: 96rem; /* max-w-6xl = 96rem */
+  max-width: 96rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -13,58 +19,58 @@
 /* Header */
 .trending-destinations-header {
   text-align: left;
-  margin-bottom: 2rem; /* mb-16 */
+  margin-bottom: 2rem;
 }
 
 .trending-destinations-title {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 2.25rem; /* text-4xl */
+  font-size: 2.25rem;
   color: var(--foreground);
 }
 
 @media (min-width: 768px) {
   .trending-destinations-title {
-    font-size: 3rem; /* md:text-5xl */
+    font-size: 3rem;
   }
 }
 
 .trending-destinations-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.125rem;
   color: var(--muted-foreground);
 }
 
 /* Grid */
 .trending-destinations-grid {
   display: grid;
-  gap: 2rem; /* gap-8 */
+  gap: 2rem;
 }
 
 @media (min-width: 768px) {
   .trending-destinations-grid {
-    grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Individual Card */
 .destination-card {
   background-color: var(--card);
-  border-radius: 0.5rem; /* rounded-lg */
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .destination-card:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* hover:shadow-lg */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Card Image */
 .destination-image {
   background-color: var(--muted);
-  height: 12rem; /* h-48 */
+  height: 12rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,27 +78,26 @@
 }
 
 .destination-image-text {
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.125rem;
   color: var(--muted-foreground);
 }
 
 /* Card Content */
 .destination-content {
-  padding: 1.5rem; /* p-6 */
+  padding: 1.5rem;
 }
 
 .destination-name {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.5rem; /* text-2xl */
+  font-size: 1.5rem;
   color: var(--foreground);
-  margin-bottom: 0.5rem; /* mb-2 */
+  margin-bottom: 0.5rem;
 }
 
 .destination-tagline {
   font-family: 'Inter', sans-serif;
   color: var(--muted-foreground);
-  
 }
 
 .destination-info {
@@ -103,7 +108,7 @@
 
 .destination-packages {
   font-family: 'Inter', sans-serif;
-  font-size: 0.875rem; /* text-sm */
+  font-size: 0.875rem;
   color: var(--muted-foreground);
 }
 

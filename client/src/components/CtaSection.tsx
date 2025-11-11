@@ -15,12 +15,6 @@ export default function CtaSection({
           experience
         </p>
         <div className="cta-buttons">
-          <button
-            className="cta-button-primary"
-            onClick={() => navigate('/contact')}
-          >
-            Get Your Quote
-          </button>
           <button className="cta-button-outline">Chat on WhatsApp</button>
         </div>
       </div>
