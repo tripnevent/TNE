@@ -23,14 +23,16 @@ export default function Hero({}: HeroProps) {
         <p className="hero-subtitle">Welcome to Trip & Event</p>
 
         <div className="hero-buttons">
-          <button
+          {/* <button
+          style={{ backgroundColor: 'white' }}
             className="hero-button hero-button-primary"
             onClick={() => navigate('/destinations')}
           >
             Explore Packages
-          </button>
+          </button> */}
           <button
             className="hero-button hero-button-outline"
+            style={{ color: 'white', borderColor: 'white' }}
             onClick={() => navigate('/experiences')}
           >
             Discover CineTrip
