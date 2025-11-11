@@ -11,7 +11,7 @@
 
 /* Header */
 .contact-header {
-  background-color: var(--color-muted);
+  background-color: var(--color-black);
   padding: 4rem 0;
   text-align: center;
 }
@@ -130,7 +130,7 @@
 .why-choose-us {
   margin-top: 4rem;
   padding: 2rem;
-  background-color: var(--color-accent);
+  background-color: var(--color-black);
   text-align: center;
 }
 
@@ -159,6 +159,7 @@
 
 .why-choose-us .cta-btn {
   text-align: center;
+  background-color: black;
 }
 
 .cta-btn button {

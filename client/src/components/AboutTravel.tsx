@@ -15,12 +15,6 @@ export default function AboutTravel() {
               and films that are timeless and etched in the memories of
               thousands forever.
             </p>
-            <p className="about-travel-paragraph">
-              We celebrate the adventurers, the rule breakers, the travelers
-              who are not afraid to experience the world differently. Our
-              approach is to capture your unique story with stunning 4K
-              cinematography and professional storytelling.
-            </p>
             <button className="about-travel-button">
               Learn More <ChevronRight className="ml-2 h-4 w-4" />
             </button>

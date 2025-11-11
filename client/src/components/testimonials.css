@@ -111,7 +111,7 @@
   justify-content: flex-start;
   min-height: 380px; /* consistent height */
   transition: transform 0.5s ease, opacity 0.5s ease;
-  background-color: var(--card);
+  background-color: var(--background);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 

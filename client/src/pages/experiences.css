@@ -20,7 +20,7 @@
 /* Page Header */
 .experiences-header-section {
   padding: 4rem 1rem; /* mobile first */
-  background-color: var(--muted);
+  background-color: var(--color-black);
   text-align: center;
 }
 
@@ -139,7 +139,7 @@
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--foreground);
+  color: var(--color-black);
   margin-bottom: 0.5rem;
 }
 
@@ -163,7 +163,6 @@
   color: var(--accent);
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 1rem;
 }
 
 /* Card Button */
@@ -188,7 +187,7 @@
 /* CTA Section */
 .experiences-cta-section {
   padding: 4rem 1rem;
-  background-color: var(--muted);
+  background-color: var(--color-black);
   text-align: center;
 }
 

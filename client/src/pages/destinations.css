@@ -20,7 +20,7 @@
 /* Header Section */
 .destinations-header-section {
   padding: 4rem 1rem;
-  background-color: var(--muted);
+  background-color: var(--color-black);
   text-align: center;
 }
 
@@ -139,7 +139,7 @@
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--foreground);
+  color: var(--color-black);
   margin-bottom: 0.5rem;
 }
 
@@ -155,7 +155,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
   padding-bottom: 1rem;
 }
@@ -171,8 +170,8 @@
   padding: 0.5rem 1rem;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
-  background-color: var(--accent-foreground);
-  color: var(--foreground);
+  background-color: var(--accent);
+  color: var(--color-white);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -186,7 +185,7 @@
 /* CTA Section */
 .destinations-cta-section {
   padding: 4rem 1rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-black);
   text-align: center;
 }
 

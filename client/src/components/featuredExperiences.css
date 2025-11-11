@@ -1,7 +1,7 @@
 /* Featured Experiences Section */
 .featured-experiences {
-  padding: 5rem 1rem; /* mobile default padding */
-  background-color: var(--muted);
+  padding: 5rem 2rem !important; /* mobile default padding */
+  background-color: var(--color-black);
 }
 
 .featured-experiences-container {
@@ -13,8 +13,8 @@
 
 /* Header */
 .featured-experiences-header {
-  text-align: center;
-  margin-bottom: 4rem;
+  text-align: right;
+  margin-bottom: 2rem;
 }
 
 .featured-experiences-title {
@@ -22,7 +22,7 @@
   font-weight: 700;
   font-size: 2rem; /* smaller on mobile */
   color: var(--foreground);
-  margin-bottom: 1rem;
+
 }
 
 @media (min-width: 768px) {

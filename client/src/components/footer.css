@@ -1,7 +1,7 @@
 /* Footer Styles */
 .footer {
-  background-color: var(--foreground);
-  color: var(--background);
+  background-color: var(--background);
+  color: var(--color-red-50);
   padding: 3rem 1rem; /* py-12 px-4 */
   font-family: 'Inter', sans-serif;
   justify-content: center;
@@ -62,6 +62,7 @@
 .footer-list li button,
 .footer-list li a {
   background: none;
+  font-family: 'inter', sans-serif;
   border: none;
   color: inherit;
   font-family: inherit;

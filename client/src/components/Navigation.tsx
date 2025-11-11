@@ -24,8 +24,11 @@ export default function Navigation() {
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo" onClick={() => navigate('/')}>
-          TRIP &<br />
-          EVENT
+          <img
+            src="/weblogo.jpg"
+            alt="Trip & Event Logo"
+            className="h-10 w-10 rounded-full cursor-pointer"
+          />
         </div>
 
         {/* Desktop Navigation */}

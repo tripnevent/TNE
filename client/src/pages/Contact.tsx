@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { useLocation } from 'wouter';
 import './Contact.css';
+import Headeruse from '@/components/ui/Headeruse';
 
 export default function Contact() {
   const [, navigate] = useLocation();
@@ -50,12 +51,12 @@ export default function Contact() {
       <Navigation />
 
       {/* Header */}
-      <section className="contact-header">
-        <div className="container">
-          <h1>Get in Touch</h1>
-          <p>Let's start planning your cinematic journey</p>
-        </div>
-      </section>
+      <Headeruse
+        title="Contact Us"
+        subtitle="Get in touch for your cinematic travel quote"
+        backgroundColor="#000000"
+        textColor="#ffffff"
+      />
 
       {/* Form + Info */}
       <section className="contact-main-container">

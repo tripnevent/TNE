@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <MapComponent />
+      {/* <MapComponent /> */}
       <CertifiedSection />
       <div className="footer-container">
         <div className="footer-grid">

@@ -1,0 +1,161 @@
+/* -------- Page Wrapper -------- */
+.yacht-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #1f1f1f;
+  font-family: "Inter", sans-serif;
+}
+
+/* -------- Hero Section -------- */
+.yacht-hero {
+  background-color: #000000;
+  text-align: center;
+  padding: 1.8rem 1rem;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+/* -------- Yacht Cards Section -------- */
+.yacht-list {
+  background-color: #000000;
+  padding: 5rem 1.5rem;
+}
+
+.yacht-grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .yacht-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.yacht-card {
+  background-color: #fafafa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.yacht-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.yacht-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.yacht-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.yacht-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.yacht-description {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  flex: 1;
+  font-size: smaller;
+}
+
+.yacht-highlights {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.yacht-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: smaller;
+  color: #555;
+}
+
+.checkmark {
+  color: #1e90ff;
+  font-weight: bold;
+}
+
+.yacht-btn {
+  background-color: #4e0f07;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* -------- CTA Section -------- */
+.yacht-cta {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.cta-text {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: #3a0505;
+  color: #ffffff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

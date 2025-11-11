@@ -3,6 +3,8 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
 import Faq from '@/components/Faq';
+import './HowItWorks.css';
+import Headeruse from '@/components/ui/Headeruse';
 
 export default function HowItWorks() {
   const [, navigate] = useLocation();
@@ -55,114 +57,57 @@ export default function HowItWorks() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="howitworks-container">
       <Navigation />
 
-      {/* Page Header */}
-      <section className="py-16 px-4 bg-muted">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-playfair font-bold text-foreground mb-4">
-            How It Works
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            From vision to reality in 4 simple steps
-          </p>
-        </div>
-      </section>
+      {/* Header */}
+       <Headeruse
+              title="How It Works"
+              subtitle="From vision to reality in 4 simple steps"
+              backgroundColor="#000000"
+              textColor="#ffffff"
+            />
+        
+       
 
-      {/* Steps Section */}
-      <section className="py-20 px-4 bg-background flex-1">
-        <div className="max-w-6xl mx-auto">
-          <div className="space-y-16">
-            {steps.map((item, idx) => (
-              <div
-                key={idx}
-                className="grid md:grid-cols-2 gap-12 items-center"
-              >
-                {idx % 2 === 0 ? (
-                  <>
-                    <div>
-                      <div className="text-7xl font-playfair font-bold text-accent mb-6 opacity-20">
-                        {item.step}
-                      </div>
-                      <h2 className="text-4xl font-playfair font-bold text-foreground mb-4">
-                        {item.title}
-                      </h2>
-                      <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                        {item.description}
-                      </p>
-                      <ul className="space-y-3">
-                        {item.details.map((detail, didx) => (
-                          <li key={didx} className="flex items-start gap-3">
-                            <span className="text-accent font-bold mt-1">
-                              ✓
-                            </span>
-                            <span className="text-muted-foreground">
-                              {detail}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="bg-muted rounded-lg h-96 flex items-center justify-center">
-                      <p className="text-muted-foreground">
-                        {item.title} Image
-                      </p>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="bg-muted rounded-lg h-96 flex items-center justify-center">
-                      <p className="text-muted-foreground">
-                        {item.title} Image
-                      </p>
-                    </div>
-                    <div>
-                      <div className="text-7xl font-playfair font-bold text-accent mb-6 opacity-20">
-                        {item.step}
-                      </div>
-                      <h2 className="text-4xl font-playfair font-bold text-foreground mb-4">
-                        {item.title}
-                      </h2>
-                      <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                        {item.description}
-                      </p>
-                      <ul className="space-y-3">
-                        {item.details.map((detail, didx) => (
-                          <li key={didx} className="flex items-start gap-3">
-                            <span className="text-accent font-bold mt-1">
-                              ✓
-                            </span>
-                            <span className="text-muted-foreground">
-                              {detail}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </>
-                )}
+      {/* Steps */}
+      <section className="steps-section">
+        <div className="steps-wrapper">
+          {steps.map((item, idx) => (
+            <div
+              key={idx}
+              className={`step-item ${idx % 2 !== 0 ? 'reverse' : ''}`}
+            >
+              <div className="step-text">
+                <div className="step-number">{item.step}</div>
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
+                <ul>
+                  {item.details.map((detail, didx) => (
+                    <li key={didx}>
+                      <span>✓</span> {detail}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
+              <div className="step-image">
+                <p>{item.title} Image</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* FAQ Section */}
       <Faq />
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-accent text-accent-foreground">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
-            Ready to Start Your Journey?
-          </h2>
-          <p className="text-lg mb-8 opacity-90">
-            Let's create your cinematic travel experience today
-          </p>
+      <section className="cta-section">
+        <div className="cta-content">
+          <h2>Ready to Start Your Journey?</h2>
+          <p>Let's create your cinematic travel experience today</p>
           <Button
             size="lg"
-            className="bg-accent-foreground hover:bg-accent-foreground/90 text-accent font-inter font-semibold px-8"
+            className="cta-button"
             onClick={() => navigate('/contact')}
           >
             Get Started Now
