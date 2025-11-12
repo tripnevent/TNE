@@ -13,11 +13,11 @@ const destinations: Destination[] = [
     id: 1,
     subtitle: 'Luxury meets cinematic magic',
     title: 'Dubai',
-    image: '/Dubai1.jpg',
+    image: '/Dubai.jpg',
   },
   {
     id: 2,
-    subtitle: 'Modern marvels & cultural wonders',
+    subtitle: 'Modern marvels & cultural ',
     title: 'Phuket',
     image: '/phuket.jpg',
   },
@@ -37,8 +37,7 @@ const destinations: Destination[] = [
     id: 5,
     subtitle: 'Timeless elegance & romance',
     title: 'Kerala',
-    image:
-      'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=800&h=600&fit=crop',
+    image: '/Kerala.jpg',
   },
   {
     id: 6,

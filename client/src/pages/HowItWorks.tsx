@@ -1,58 +1,58 @@
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { useLocation } from 'wouter';
-import Faq from '@/components/Faq';
-import './HowItWorks.css';
-import Headeruse from '@/components/ui/Headeruse';
-import CtaSection from '@/components/CtaSection';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import Faq from "@/components/Faq";
+import { useLocation } from "wouter";
+import Headeruse from "@/components/ui/Headeruse";
+import CtaSection from "@/components/CtaSection";
+import { motion } from "framer-motion";
+import "./HowItWorks.css";
 
 export default function HowItWorks() {
   const [, navigate] = useLocation();
 
   const steps = [
     {
-      step: '01',
-      title: 'Share Your Vision',
+      step: "01",
+      title: "Share Your Vision",
       description:
         "Tell us your dream destination, occasion, and cinematic style. We'll listen to your ideas and understand your unique story.",
       details: [
-        'Discuss your travel dates and budget',
-        'Share your vision and preferences',
-        'Explore destination options',
+        "Discuss your travel dates and budget",
+        "Share your vision and preferences",
+        "Explore destination options",
       ],
     },
     {
-      step: '02',
-      title: 'Custom Planning',
+      step: "02",
+      title: "Custom Planning",
       description:
-        'We craft a personalized itinerary with locations and filming schedule. Our team will plan every detail to perfection.',
+        "We craft a personalized itinerary with locations and filming schedule. Our team will plan every detail to perfection.",
       details: [
-        'Create a detailed itinerary',
-        'Plan filming locations and schedules',
-        'Arrange logistics and accommodations',
+        "Create a detailed itinerary",
+        "Plan filming locations and schedules",
+        "Arrange logistics and accommodations",
       ],
     },
     {
-      step: '03',
-      title: 'Cinematic Journey',
+      step: "03",
+      title: "Cinematic Journey",
       description:
-        'Travel with our professional crew capturing every magical moment. Experience your journey while we document it beautifully.',
+        "Travel with our professional crew capturing every magical moment. Experience your journey while we document it beautifully.",
       details: [
-        'Travel with professional cinematographers',
-        'Capture stunning 4K footage',
-        'Create memorable experiences',
+        "Travel with professional cinematographers",
+        "Capture stunning 4K footage",
+        "Create memorable experiences",
       ],
     },
     {
-      step: '04',
-      title: 'Relive Forever',
+      step: "04",
+      title: "Relive Forever",
       description:
-        'Receive your professionally edited film within 30 days. Your cinematic masterpiece will be ready to share with the world.',
+        "Receive your professionally edited film within 30 days. Your cinematic masterpiece will be ready to share with the world.",
       details: [
-        'Professional color grading and editing',
-        'Custom music and sound design',
-        'Multiple format deliverables',
+        "Professional color grading and editing",
+        "Custom music and sound design",
+        "Multiple format deliverables",
       ],
     },
   ];
@@ -61,21 +61,24 @@ export default function HowItWorks() {
     <div className="howitworks-container">
       <Navigation />
 
-      {/* Header */}
       <Headeruse
         title="How It Works"
         subtitle="From vision to reality in 4 simple steps"
-        backgroundColor="#000000"
-        textColor="#ffffff"
+        backgroundColor="#000"
+        textColor="#fff"
       />
 
-      {/* Steps */}
+      {/* Steps Section */}
       <section className="steps-section">
         <div className="steps-wrapper">
           {steps.map((item, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className={`step-item ${idx % 2 !== 0 ? 'reverse' : ''}`}
+              className={`step-item ${idx % 2 !== 0 ? "reverse" : ""}`}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <div className="step-text">
                 <div className="step-number">{item.step}</div>
@@ -89,24 +92,28 @@ export default function HowItWorks() {
                   ))}
                 </ul>
               </div>
-              <div className="step-image">
+
+              <motion.div
+                className="step-image"
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 150 }}
+              >
                 <p>{item.title} Image</p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </section>
 
       <Faq />
 
-      {/* CTA Section */}
       <CtaSection
         title="Ready to Start Your Journey?"
         subtitle="Let's create your cinematic travel experience today."
         primaryButton={{
-          label: 'Get Started Now',
-          onClick: () => navigate('/contact'),
-          variant: 'outline',
+          label: "Get Started Now",
+          onClick: () => navigate("/contact"),
+          variant: "outline",
         }}
       />
 

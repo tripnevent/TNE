@@ -1,47 +1,47 @@
+import { Suspense, lazy } from "react";
+import { Route, Switch } from "wouter";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-import Destinations from "./pages/Destinations";
-import Experiences from "./pages/Experiences";
-import HowItWorks from "./pages/HowItWorks";
-import Contact from "./pages/Contact";
-import Yacht from "./pages/Yacht";
-import './index.css'; // or './main.css'
+import { ClipLoader } from "react-spinners";
 
+// Lazy load pages
+const Home = lazy(() => import("./pages/Home"));
+const Destinations = lazy(() => import("./pages/Destinations"));
+const Experiences = lazy(() => import("./pages/Experiences"));
+const HowItWorks = lazy(() => import("./pages/HowItWorks"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Yacht = lazy(() => import("./pages/Yacht"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
-    <Switch>
-      <Route path={"\\"} component={Home} />
-      <Route path={"/destinations"} component={Destinations} />
-      <Route path={"/experiences"} component={Experiences} />
-      <Route path={"/how-it-works"} component={HowItWorks} />
-      <Route path={"/contact"} component={Contact} />
-      <Route path={"/yacht"} component={Yacht} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+       <Suspense
+      fallback={
+        <div className="flex items-center justify-center min-h-screen bg-background">
+          <ClipLoader color="#fff" size={60} />
+        </div>
+      }
+    >
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/destinations" component={Destinations} />
+        <Route path="/experiences" component={Experiences} />
+        <Route path="/how-it-works" component={HowItWorks} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/yacht" component={Yacht} />
+        {/* Fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
-
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
           <Router />

@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+/* =========================
+   Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+/* Tailwind + Animate CSS */
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-/* Theme variables */
+/* =========================
+   Theme Variables
+========================= */
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -32,17 +40,11 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* Root light mode variables */
+/* =========================
+   Root Colors
+========================= */
 :root {
   --primary: oklch(0.35 0.12 25);
   --primary-foreground: oklch(1 0 0);
@@ -66,35 +68,67 @@
   --accent-foreground: oklch(1 0 0);
 }
 
-/* Base styles */
+/* =========================
+   Base Styles
+========================= */
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border: var(--border);
+    outline: var(--ring) / 50;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif; /* main body text */
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; /* headings */
+  }
+
+  a,
+  img,
+  video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    image-rendering: auto;
   }
 }
 
-/* Component fonts */
+/* =========================
+   Component Fonts / Utilities
+========================= */
 @layer components {
   .font-playfair {
     font-family: 'Playfair Display', serif;
   }
-  .font-lora {
-    font-family: 'Lora', serif;
-  }
   .font-inter {
     font-family: 'Inter', sans-serif;
+  }
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
   }
 
   .container {
@@ -103,11 +137,6 @@
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
   }
 
   @media (min-width: 640px) {
@@ -123,34 +152,9 @@
       max-width: 1280px;
     }
   }
-}
 
-/* Global box sizing & smooth transitions */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-* {
-  transition: all 0.3s ease-in-out;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  padding: 0;
-  background-color: var(--background);
-  color: var(--foreground);
-}
-a,
-img,
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  .flex {
+    min-width: 0;
+    min-height: 0;
+  }
 }

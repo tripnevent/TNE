@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500&display=swap' );
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500&display=swap');
 
 body {
   background-color: #000000;
@@ -22,7 +22,7 @@ body {
 }
 
 .destinations-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
@@ -37,7 +37,7 @@ body {
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   margin-left: 10px;
 }
@@ -62,7 +62,7 @@ body {
 }
 
 .filter-btn {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: transparent;
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -89,6 +89,7 @@ body {
 .destinations-grid {
   display: flex;
   gap: 20px;
+  height: 340px;
   overflow-x: auto; /* Allows horizontal scrolling if needed */
   padding-bottom: 10px;
   padding-top: 10px; /* For scrollbar visibility */
@@ -100,8 +101,8 @@ body {
 }
 
 .destinations-grid {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .destination-card {
@@ -124,21 +125,36 @@ body {
   left: 0;
   right: 0;
   padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
-.card-subtitle {
+/* .card-subtitle {
   font-family: "Inter", sans-serif;
   font-size: 15px;
   margin: 0 0 5px 0;
   text-transform: uppercase;
   padding-left: 10px;
-}
+} */
 
 .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ddd;
+  padding-left: 10px;
+}
+
+/* .card-title {
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
   font-weight: 700;
   padding-left: 10px;
   margin: 0;
-}
+} */

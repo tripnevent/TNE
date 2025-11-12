@@ -1,3 +1,4 @@
+/* ====== Our Services Section ====== */
 .ourservices-container {
   padding: 3rem 1rem;
   background-color: var(--background, #0a0a0a);
@@ -19,13 +20,14 @@
   font-family: "Cormorant Garamond", serif;
 }
 
-/* Filters */
+/* ====== Filters ====== */
 .filter-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .filter-group {
@@ -38,7 +40,7 @@
   background: transparent;
   border: 1px solid #888;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.1rem;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -51,7 +53,7 @@
   border-color: #fff;
 }
 
-/* Arrows */
+/* ====== Navigation Arrows ====== */
 .navigation-arrows {
   display: flex;
   gap: 0.5rem;
@@ -66,7 +68,7 @@
   font-size: 1.5rem;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .arrow-btn:hover {
@@ -74,7 +76,7 @@
   color: #000;
 }
 
-/* Cards Slider */
+/* ====== Slider ====== */
 .services-slider {
   display: flex;
   gap: 1rem;
@@ -87,7 +89,7 @@
   display: none;
 }
 
-/* Card */
+/* ====== Service Card ====== */
 .service-card {
   min-width: 320px;
   height: 420px;
@@ -97,18 +99,18 @@
   position: relative;
   flex-shrink: 0;
   overflow: hidden;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, box-shadow 0.4s ease;
 }
-
 
 .service-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 2rem;
+  transition: background 0.4s ease;
 }
 
 .service-title {
@@ -118,7 +120,8 @@
 }
 
 .service-subtitle {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin-bottom: 1rem;
   color: #ddd;
 }
@@ -126,21 +129,19 @@
 .service-btn {
   background-color: transparent;
   color: #fff;
-  border: none;
+  border: 1px solid #ffffff;
   padding: 0.6rem 1.2rem;
   cursor: pointer;
-  border: 1px solid #ffffff;
-  font-weight: medium;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
-/* .service-btn:hover {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-} */
+.service-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
 
-/* Responsive */
+/* ====== Responsive ====== */
 @media (max-width: 768px) {
   .service-card {
     min-width: 280px;
@@ -148,11 +149,12 @@
   }
 
   .ourservices-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .filter-controls {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
   }
 }

@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -5,10 +6,12 @@ import { useLocation } from 'wouter';
 import './destinations.css';
 import Headeruse from '@/components/ui/Headeruse';
 import CtaSection from '@/components/CtaSection';
+import { Loader2 } from 'lucide-react'; // optional spinner icon
 
 export default function Destinations() {
   const [, navigate] = useLocation();
 
+  // ✅ Static data kept clean & reusable
   const destinations = [
     {
       name: 'Dubai',
@@ -61,56 +64,75 @@ export default function Destinations() {
 
   return (
     <div className="destinations-page">
-      <Navigation />
+      {/* Navigation */}
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center min-h-[50vh] text-white">
+            <Loader2 className="animate-spin w-6 h-6 mr-2" />
+            <span>Loading Destinations...</span>
+          </div>
+        }
+      >
+        <Navigation />
 
-      {/* Page Header */}
-      <Headeruse
-        title="Trending Destinations"
-        subtitle="Explore cinematic journeys around the world"
-        backgroundColor="#000000"
-        textColor="#ffffff"
-      />
+        {/* Header */}
+        <Headeruse
+          title="All Destinations"
+          subtitle="Explore cinematic journeys around the world"
+          backgroundColor="#000"
+          textColor="#fff"
+        />
 
-      {/* Destinations Grid */}
-      <section className="destinations-grid-section">
-        <div className="destinations-grid-container">
-          {destinations.map((dest, idx) => (
-            <div key={idx} className="destination-card">
-              <div className="destination-image">
-                <p className="destination-image-text">{dest.name} Image</p>
-              </div>
-              <div className="destination-content">
-                <h3 className="destination-title">{dest.name}</h3>
-                <p className="destination-tagline">{dest.tagline}</p>
-                <p className="destination-description">{dest.description}</p>
-                <div className="destination-info">
-                  <span>{dest.packages} Packages</span>
-                  <span className="destination-price">From {dest.price}</span>
+        {/* Destinations Grid */}
+        <section className="destinations-grid-section">
+          <div className="destinations-grid-container">
+            {destinations.map((dest) => (
+              <div key={dest.name} className="destination-card">
+                <div className="destination-image">
+                  <img
+                    src={`/${dest.name.toLowerCase()}.jpg`}
+                    alt={`Beautiful view of ${dest.name}`}
+                    className="destination-img"
+                    loading="lazy"
+                  />
                 </div>
-                <Button
-                  className="destination-button"
-                  onClick={() => navigate('/contact')}
-                >
-                  View Packages
-                </Button>
+
+                <div className="destination-content">
+                  <h3 className="destination-title">{dest.name}</h3>
+                  <p className="destination-tagline">{dest.tagline}</p>
+                  <p className="destination-description">{dest.description}</p>
+
+                  <div className="destination-info">
+                    <span>{dest.packages} Packages</span>
+                    <span className="destination-price">From {dest.price}</span>
+                  </div>
+
+                  <Button
+                    className="destination-button"
+                    onClick={() => navigate('/contact')}
+                  >
+                    View Packages
+                  </Button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* CTA Section */}
-      <CtaSection
-        title="Can't Find Your Dream Destination?"
-        subtitle="We can create custom packages for any destination you have in mind."
-        primaryButton={{
-          label: 'Contact Us',
-          onClick: () => navigate('/contact'),
-          variant: 'outline',  
-        }}
-      />
+        {/* CTA Section */}
+        <CtaSection
+          title="Can't Find Your Dream Destination?"
+          subtitle="We can create custom packages for any destination you have in mind."
+          primaryButton={{
+            label: 'Contact Us',
+            onClick: () => navigate('/contact'),
+            variant: 'outline',
+          }}
+        />
 
-      <Footer />
+        {/* Footer */}
+        <Footer />
+      </Suspense>
     </div>
   );
 }

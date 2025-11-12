@@ -1,42 +1,42 @@
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { useLocation } from 'wouter';
-import CtaSection from '@/components/CtaSection';
-import './Yacht.css';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
+import CtaSection from "@/components/CtaSection";
+import "./Yacht.css";
 
 export default function Yacht() {
   const [, navigate] = useLocation();
 
   const yachts = [
     {
-      name: 'Sunset Luxury Cruise',
+      name: "Sunset Luxury Cruise",
       description:
-        'Experience a serene sunset aboard our luxury yacht with premium amenities and personalized service.',
+        "Experience a serene sunset aboard our luxury yacht with premium amenities and personalized service.",
       highlights: [
-        'Private bar & lounge',
-        'Sunset deck seating',
-        'Gourmet dining options',
+        "Private bar & lounge",
+        "Sunset deck seating",
+        "Gourmet dining options",
       ],
-      image: '/images/yacht1.jpg',
+      image: "/images/yacht1.jpg",
     },
     {
-      name: 'Adventure & Watersports',
+      name: "Adventure & Watersports",
       description:
-        'Perfect for thrill-seekers, enjoy water sports, jet skis, and diving activities while cruising the coast.',
+        "Perfect for thrill-seekers, enjoy water sports, jet skis, and diving activities while cruising the coast.",
       highlights: [
-        'Jet skis & paddleboards',
-        'Snorkeling spots',
-        'Expert guides onboard',
+        "Jet skis & paddleboards",
+        "Snorkeling spots",
+        "Expert guides onboard",
       ],
-      image: '/images/yacht2.jpg',
+      image: "/images/yacht2.jpg",
     },
     {
-      name: 'Romantic Escape',
+      name: "Romantic Escape",
       description:
-        'A dreamy yacht experience ideal for couples, featuring sunset sails, cozy seating, and private cabins.',
-      highlights: ['Private cabins', 'Romantic dinner setup', 'Sunset sail'],
-      image: '/images/yacht3.jpg',
+        "A dreamy yacht experience ideal for couples, featuring sunset sails, cozy seating, and private cabins.",
+      highlights: ["Private cabins", "Romantic dinner setup", "Sunset sail"],
+      image: "/images/yacht3.jpg",
     },
   ];
 
@@ -57,30 +57,37 @@ export default function Yacht() {
       {/* Yacht Cards */}
       <section className="yacht-list">
         <div className="yacht-grid">
-          {yachts.map((yacht, idx) => (
-            <div key={idx} className="yacht-card">
-              <div className="yacht-image">
-                <img src={yacht.image} alt={yacht.name} />
-              </div>
+          {yachts.map(({ name, description, highlights, image }) => (
+            <article key={name} className="yacht-card">
+              <figure className="yacht-image">
+                <img
+                  src={image}
+                  alt={name}
+                  loading="lazy"
+                  decoding="async"
+                  width="100%"
+                  height="200"
+                />
+              </figure>
               <div className="yacht-info">
-                <h2 className="yacht-name">{yacht.name}</h2>
-                <p className="yacht-description">{yacht.description}</p>
+                <h2 className="yacht-name">{name}</h2>
+                <p className="yacht-description">{description}</p>
                 <ul className="yacht-highlights">
-                  {yacht.highlights.map((item, i) => (
-                    <li key={i}>
-                      <span className="checkmark">✓</span>
-                      {item}
+                  {highlights.map((item) => (
+                    <li key={item}>
+                      <span className="checkmark">✓</span> {item}
                     </li>
                   ))}
                 </ul>
                 <Button
-                  onClick={() => navigate('/contact')}
+                  onClick={() => navigate("/contact")}
                   className="yacht-btn"
+                  variant="outline"
                 >
                   Book Your Yacht
                 </Button>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
@@ -90,9 +97,9 @@ export default function Yacht() {
         title="Ready to Sail in Style?"
         subtitle="Choose your perfect yacht experience and let us craft an unforgettable journey."
         primaryButton={{
-          label: 'Contact Us',
-          onClick: () => navigate('/contact'),
-          variant: 'outline',
+          label: "Contact Us",
+          onClick: () => navigate("/contact"),
+          variant: "outline",
         }}
       />
 

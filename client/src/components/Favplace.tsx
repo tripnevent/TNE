@@ -14,7 +14,7 @@ const places = [
   {
     name: 'Dubai',
     price: '37,500',
-    image: '/Dubai1.jpg',
+    image: '/Dubai.jpg',
     className: 'card-thailand',
   },
   {

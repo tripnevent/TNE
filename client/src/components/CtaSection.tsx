@@ -22,11 +22,9 @@ const CtaSection: React.FC<CtaSectionProps> = ({
   secondaryButton,
   background,
 }) => {
-  const sectionStyle = background
-    ? background.startsWith('http') || background.startsWith('/')
-      ? { backgroundImage: `url(${background})` }
-      : { backgroundColor: background }
-    : {};
+  const sectionStyle = {
+    backgroundColor: '#000',
+  };
 
   return (
     <section className="cta-section" style={sectionStyle}>

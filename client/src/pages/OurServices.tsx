@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useMemo } from 'react';
 import './ourservices.css';
 
 interface Service {
@@ -24,7 +24,7 @@ const services: Service[] = [
     title: 'Pre-Wedding Shoot',
     subtitle: 'Cinematic storytelling before your big day',
     button: 'View Packages',
-    image: '/Dubai1.jpg',
+    image: '/Dubai.jpg',
     continent: 'Asia',
   },
   {
@@ -85,49 +85,53 @@ const services: Service[] = [
   },
 ];
 
+const continents = [
+  'All',
+  'Asia',
+  'Europe',
+  'Middle East',
+  'North America',
+  'Global',
+];
+
 const OurServices: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const continents = [
-    'All',
-    'Asia',
-    'Europe',
-    'Middle East',
-    'North America',
-    'Global',
-  ];
+  // UseMemo for optimized filtering
+  const filteredServices = useMemo(
+    () =>
+      activeFilter === 'All'
+        ? services
+        : services.filter((s) => s.continent === activeFilter),
+    [activeFilter]
+  );
 
-  const filteredServices =
-    activeFilter === 'All'
-      ? services
-      : services.filter((s) => s.continent === activeFilter);
+  const handleScroll = (direction: 'left' | 'right') => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const scrollAmount =
+      direction === 'left'
+        ? container.scrollLeft - container.clientWidth
+        : container.scrollLeft + container.clientWidth;
 
-  // Scroll Logic
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollAmount =
-        direction === 'left'
-          ? scrollLeft - clientWidth
-          : scrollLeft + clientWidth;
-      scrollRef.current.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-    }
+    container.scrollTo({ left: scrollAmount, behavior: 'smooth' });
   };
 
   return (
-    <div className="ourservices-container">
-      <div className="ourservices-header">
+    <section className="ourservices-container">
+      <header className="ourservices-header">
         <h2 className="ourservices-title">OUR SERVICES</h2>
-      </div>
+      </header>
 
-      {/* Filter Buttons */}
       <div className="filter-controls">
         <div className="filter-group">
           {continents.map((continent) => (
             <button
               key={continent}
-              className={`filter-btn ${activeFilter === continent ? 'active' : ''}`}
+              className={`filter-btn ${
+                activeFilter === continent ? 'active' : ''
+              }`}
               onClick={() => setActiveFilter(continent)}
             >
               {continent}
@@ -136,19 +140,26 @@ const OurServices: React.FC = () => {
         </div>
 
         <div className="navigation-arrows">
-          <button className="arrow-btn prev" onClick={() => scroll('left')}>
+          <button
+            className="arrow-btn prev"
+            aria-label="Previous"
+            onClick={() => handleScroll('left')}
+          >
             ‹
           </button>
-          <button className="arrow-btn next" onClick={() => scroll('right')}>
+          <button
+            className="arrow-btn next"
+            aria-label="Next"
+            onClick={() => handleScroll('right')}
+          >
             ›
           </button>
         </div>
       </div>
 
-      {/* Card Slider */}
       <div className="services-slider" ref={scrollRef}>
         {filteredServices.map((service) => (
-          <div
+          <article
             key={service.id}
             className="service-card"
             style={{ backgroundImage: `url(${service.image})` }}
@@ -158,10 +169,10 @@ const OurServices: React.FC = () => {
               <p className="service-subtitle">{service.subtitle}</p>
               <button className="service-btn">{service.button}</button>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
