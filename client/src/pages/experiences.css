@@ -7,7 +7,9 @@
   box-sizing: border-box;
 }
 
-/* Outer Section Wrapper */
+/* ==============================
+   Outer Section Wrapper
+   ============================== */
 .experiences-page {
   min-height: 100vh;
   display: flex;
@@ -17,7 +19,9 @@
   overflow-x: hidden; /* prevent horizontal scroll */
 }
 
-/* Page Header */
+/* ==============================
+   Page Header
+   ============================== */
 .experiences-header-section {
   padding: 4rem 1rem; /* mobile first */
   background-color: var(--color-black);
@@ -61,7 +65,9 @@
   }
 }
 
-/* Experiences Grid Section */
+/* ==============================
+   Experiences Grid Section
+   ============================== */
 .experiences-grid-section {
   flex: 1;
   padding: 4rem 1rem;
@@ -79,13 +85,13 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 5px;
 }
 
 @media (min-width: 768px) {
   .experiences-grid-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 20px;
   }
 }
 
@@ -95,14 +101,14 @@
   }
 }
 
-/* Individual Experience Card */
+/* ==============================
+   Individual Experience Card
+   ============================== */
 .experience-card {
   background-color: var(--card);
-  border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
@@ -129,17 +135,17 @@
 
 /* Content Section */
 .experience-content {
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  background-color: black;
   flex: 1;
 }
 
 .experience-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--color-black);
+  color: white;
   margin-bottom: 0.5rem;
 }
 
@@ -154,13 +160,14 @@
   font-size: 0.875rem;
   color: var(--muted-foreground);
   margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
 }
 
 .experience-duration {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--accent);
+  color: white;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
@@ -172,14 +179,22 @@
   padding: 0.5rem 1rem;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
-  background-color: var(--accent);
+  background-color: black;
   color: var(--accent-foreground);
+  border: 1px solid white !important;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-/* CTA Section */
+.experience-button:hover {
+  background-color: var(--accent-foreground);
+  color: black;
+}
+
+/* ==============================
+   CTA Section
+   ============================== */
 .experiences-cta-section {
   padding: 4rem 1rem;
   background-color: var(--color-black);

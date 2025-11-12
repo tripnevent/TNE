@@ -122,9 +122,6 @@ export default function Contact() {
             <li>✓ Customizable packages for every budget</li>
             <li>✓ Dedicated team for your journey</li>
           </ul>
-          <div className="cta-btn">
-            <Button size="lg" onClick={() => navigate('/contact')}>Request Your Quote</Button>
-          </div>
         </div>
       </section>
 

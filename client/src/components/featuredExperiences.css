@@ -3,7 +3,7 @@
 /* ----------- Section Container ----------- */
 .featured-experiences {
   padding: 3rem 1rem;
-  background-color: #000; /* pure black background */
+  background-color: #000000; /* pure black background */
   color: #fff;
 }
 
@@ -40,6 +40,7 @@
 .featured-experiences-grid {
   display: grid;
   gap: 0.5rem;
+  background-color: #000;
   width: 100%;
 }
 

@@ -2,7 +2,14 @@ import CertifiedSection from './CertifiedSection';
 import './footer.css';
 import { useLocation } from 'wouter';
 import { useEffect, useState } from 'react';
-import { ArrowUp, Instagram, Facebook, Youtube , Linkedin } from 'lucide-react'; // Added icons
+import {
+  ArrowUp,
+  Instagram,
+  Facebook,
+  Youtube,
+  Linkedin,
+  MessageCircle,
+} from 'lucide-react'; // Added icons
 
 export default function Footer() {
   const [, navigate] = useLocation();
@@ -53,11 +60,48 @@ export default function Footer() {
             <div>
               <h4 className="footer-heading">Quick Links</h4>
               <ul className="footer-list">
-                  <li><button onClick={() => navigate('/yacht')}>Yacht</button></li>
-                <li><button onClick={() => navigate('/destinations')}>Destinations</button></li>
-              
-                <li><button onClick={() => navigate('/experiences')}>Experiences</button></li>
-                <li><button onClick={() => navigate('/how-it-works')}>How It Works</button></li>
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate('/yacht');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    Yacht
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate('/destinations');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    Destinations
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate('/experiences');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    Experiences
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate('/how-it-works');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    How It Works
+                  </button>
+                </li>
               </ul>
             </div>
 
@@ -65,13 +109,25 @@ export default function Footer() {
             <div>
               <h4 className="footer-heading">Contact</h4>
               <ul className="footer-list">
-                 <li>
-                  <button className="get-in-touch" onClick={() => navigate('/contact')}>
+                <li>
+                  <button
+                    className="get-in-touch"
+                    onClick={() => {
+                      navigate('/contact');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
                     Get in Touch
                   </button>
                 </li>
-                 <li><a href="tel:+91 900 700 0777">+91 900 700 0777</a></li>
-                <li><a href="mailto:hello@tripandevent.com">hello@tripandevent.com</a></li>
+                <li>
+                  <a href="tel:+91 900 700 0777">+91 900 700 0777</a>
+                </li>
+                <li>
+                  <a href="mailto:hello@tripandevent.com">
+                    hello@tripandevent.com
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -79,10 +135,55 @@ export default function Footer() {
             <div>
               <h4 className="footer-heading">Follow Us</h4>
               <ul className="footer-icons">
-                <li><a href="#"><Instagram className="social-icon" /></a></li>
-                <li><a href="#"><Facebook className="social-icon" /></a></li>
-                <li><a href="#"><Youtube className="social-icon" /></a></li>
-                <li><a href="#"><Linkedin className="social-icon" /></a></li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/tripandevent/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram className="social-icon" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.facebook.com/share/1Bw8BXmaS2/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook className="social-icon" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.youtube.com/@tripandevent?si=Mvgxlpary9tfHTBs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Youtube className="social-icon" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/trip-and-event/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin className="social-icon" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://wa.me/919007000777"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="social-icon" />
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
