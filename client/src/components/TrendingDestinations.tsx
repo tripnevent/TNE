@@ -13,7 +13,7 @@ const destinations: Destination[] = [
     id: 1,
     subtitle: 'Luxury meets cinematic magic',
     title: 'Dubai',
-    image: '/Dubai.jpg',
+    image: '/dubai.jpg',
   },
   {
     id: 2,

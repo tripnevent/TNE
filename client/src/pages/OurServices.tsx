@@ -24,7 +24,7 @@ const services: Service[] = [
     title: 'Pre-Wedding Shoot',
     subtitle: 'Cinematic storytelling before your big day',
     button: 'View Packages',
-    image: '/Dubai.jpg',
+    image: '/prewedding.png',
     continent: 'Asia',
   },
   {
