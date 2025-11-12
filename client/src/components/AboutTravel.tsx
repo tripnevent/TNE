@@ -7,7 +7,7 @@ import "./aboutTravel.css";
 export default function AboutTravel() {
  const imageUrl = "/modernimg.jpeg";
   return (
-    <section className="about-travel" style={{ backgroundImage: `url(${imageUrl})` }}>
+    <section className="about-travel" style={{ backgroundImage: `url(${imageUrl})`, transition: "transform 5s ease" }}>
       <div className="about-travel-container">
         <div className="about-travel-content">
           {/* The text content is from the user's second request */}

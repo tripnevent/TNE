@@ -28,10 +28,12 @@ export default function Home() {
       {/* Featured Experiences Section */}
       <FeaturedExperiences  />
 
+        <Favplace />
+
       {/* Trending Destinations Section */}
       <TrendingDestinations  />
 
-      <Favplace />
+    
 
       {/* How It Works Section */}
 

@@ -71,11 +71,25 @@
 .hero-scroll-indicator {
   position: absolute;
   bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
-  color: rgb(255, 255, 255)222;
+  color: rgb(255, 255, 255);
+  animation: floatUpDown 2.5s ease-in-out infinite;
 }
+
+/* Smooth up-down motion */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -8px); /* moves slightly upward */
+  }
+}
+
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 1024px) {

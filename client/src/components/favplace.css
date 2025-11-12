@@ -6,7 +6,7 @@
   /* Approximate background color from the image */
   background-color: #000000;
   padding: 1.2rem;
-  max-width: 1200px; /* A reasonable max-width for the content */
+/* A reasonable max-width for the content */
   margin: 0 auto;
   font-family: 'Inter', sans-serif;
 }
@@ -29,14 +29,13 @@
   grid-template-columns: repeat(6, 1fr);
   /* The layout suggests a 4-row structure (2 for top row, 2 for bottom row) */
   grid-template-rows: repeat(4, 1fr);
-  gap: 16px; /* Spacing between cards */
+  gap: 5px; /* Spacing between cards */
   height: 600px; /* Fixed height to ensure the grid items align properly */
 }
 
 .fav-place-card {
   position: relative;
   overflow: hidden;
-  border-radius: 8px; /* Approximate border radius */
   color: white;
   cursor: pointer;
 }
@@ -46,7 +45,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 5s ease;
 }
 
 .fav-place-card:hover .fav-place-image {

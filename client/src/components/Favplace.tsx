@@ -5,40 +5,40 @@ import './favplace.css';
 // In a real-world scenario, these would be replaced with the actual image paths.
 const places = [
   {
-    name: 'Mauritius',
+    name: 'Kerala',
     price: '62,500',
     image: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     // The class names will be used for grid layout in CSS
     className: 'card-mauritius',
   },
   {
-    name: 'Thailand',
+    name: 'Dubai',
     price: '37,500',
-    image: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/Dubai1.jpg',
     className: 'card-thailand',
   },
   {
-    name: 'Maldives',
+    name: 'Andaman',
     price: '43,854',
-    image: 'https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/andaman.jpg',
     className: 'card-maldives',
   },
   {
-    name: 'Malaysia',
+    name: 'Bali',
     price: '48,750',
-    image: 'https://images.unsplash.com/photo-1596422846543-75c651443162?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/bali.jpg',
     className: 'card-malaysia',
   },
   {
-    name: 'Sri Lanka',
+    name: 'Phuket',
     price: '30,000',
-    image: 'https://images.unsplash.com/photo-1579478147710-c2b7b52a2a49?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/phuket.jpg',
     className: 'card-srilanka',
   },
   {
-    name: 'Seychelles',
+    name: 'Singapore',
     price: '25,330',
-    image: 'https://images.unsplash.com/photo-1542042161-955013509038?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/singapore.jpg',
     className: 'card-seychelles',
   },
 ];

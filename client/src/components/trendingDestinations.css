@@ -7,7 +7,7 @@ body {
 
 .destinations-container {
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 40px auto;
   padding: 20px;
   box-sizing: border-box;
@@ -50,7 +50,15 @@ body {
 .filter-buttons {
   display: flex;
   gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
   margin-bottom: 30px;
+}
+.filter-btn-group {
+  display: flex;
+  gap: 10px;
 }
 
 .filter-btn {

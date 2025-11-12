@@ -13,29 +13,25 @@ const destinations: Destination[] = [
     id: 1,
     subtitle: 'Luxury meets cinematic magic',
     title: 'Dubai',
-    image:
-      'https://images.unsplash.com/photo-1512453475868-a34144e5a3af?w=800&h=600&fit=crop',
+    image: '/Dubai1.jpg',
   },
   {
     id: 2,
     subtitle: 'Modern marvels & cultural wonders',
     title: 'Phuket',
-    image:
-      'https://images.unsplash.com/photo-1549887534-3db1bd59dcca?w=800&h=600&fit=crop',
+    image: '/phuket.jpg',
   },
   {
     id: 3,
     subtitle: 'Paradise on Earth',
     title: 'Bali',
-    image:
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop',
+    image: '/bali.jpg',
   },
   {
     id: 4,
     subtitle: 'Island of the Gods',
     title: 'Singapore',
-    image:
-      'https://images.unsplash.com/photo-1519066629447-267fffa62d5a?w=800&h=600&fit=crop',
+    image: '/singapore.jpg',
   },
   {
     id: 5,
@@ -48,11 +44,9 @@ const destinations: Destination[] = [
     id: 6,
     subtitle: 'Heaven on Earth',
     title: 'Andaman',
-    image:
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop',
+    image: '/andaman.jpg',
   },
 ];
-
 
 const TrendingDestinations: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -76,6 +70,20 @@ const TrendingDestinations: React.FC = () => {
     <div className="destinations-container">
       <div className="destinations-header">
         <h2 className="destinations-title">DESTINATIONS</h2>
+      </div>
+
+      <div className="filter-buttons">
+        <div className="filter-btn-group">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
         <div className="navigation-arrows">
           <button className="arrow-btn prev" onClick={() => scroll('left')}>
             ‹
@@ -86,18 +94,6 @@ const TrendingDestinations: React.FC = () => {
         </div>
       </div>
 
-      <div className="filter-buttons">
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
-            onClick={() => setActiveFilter(filter)}
-          >
-            {filter}
-          </button>
-        ))}
-      </div>
-
       <div className="destinations-grid" ref={scrollRef}>
         {destinations.map((dest) => (
           <div
@@ -106,7 +102,7 @@ const TrendingDestinations: React.FC = () => {
             style={{ backgroundImage: `url(${dest.image})` }}
           >
             <div className="card-content">
-               <h3 className="card-title">{dest.title}</h3>
+              <h3 className="card-title">{dest.title}</h3>
               <p className="card-subtitle">{dest.subtitle}</p>
             </div>
           </div>
@@ -118,7 +114,7 @@ const TrendingDestinations: React.FC = () => {
 
 export default TrendingDestinations;
 
- //{ name: 'Dubai', tagline: 'Luxury meets cinematic magic', packages: 12, price: '₹85,000' },
+//{ name: 'Dubai', tagline: 'Luxury meets cinematic magic', packages: 12, price: '₹85,000' },
 //   { name: 'Phuket ', tagline: 'Modern marvels & cultural wonders', packages: 8, price: '₹75,000' },
 //   { name: 'Bali', tagline: 'Paradise on Earth', packages: 10, price: '₹1,25,000' },
 //   { name: 'Singapore', tagline: 'Island of the Gods', packages: 9, price: '₹65,000' },
