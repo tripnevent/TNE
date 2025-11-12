@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
 import './destinations.css';
 import Headeruse from '@/components/ui/Headeruse';
-import CTAReuse from '@/components/ui/CTAReuse';
+import CtaSection from '@/components/CtaSection';
 
 export default function Destinations() {
   const [, navigate] = useLocation();
@@ -100,11 +100,14 @@ export default function Destinations() {
       </section>
 
       {/* CTA Section */}
-      <CTAReuse
+      <CtaSection
         title="Can't Find Your Dream Destination?"
-        text="We can create custom packages for any destination you have in mind."
-        buttonText="Get Custom Quote"
-        buttonLink="/contact"
+        subtitle="We can create custom packages for any destination you have in mind."
+        primaryButton={{
+          label: 'Contact Us',
+          onClick: () => navigate('/contact'),
+          variant: 'outline',  
+        }}
       />
 
       <Footer />

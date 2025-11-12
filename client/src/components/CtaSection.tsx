@@ -1,23 +1,74 @@
-import './ctaSection.css';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import "./ctaSection.css";
 
-export default function CtaSection({
-  navigate,
-}: {
-  navigate: (path: string) => void;
-}) {
+interface ButtonConfig {
+  label: string;
+  onClick?: () => void;
+  variant?: "solid" | "outline";
+}
+
+interface CtaSectionProps {
+  title: string;
+  subtitle: string;
+  primaryButton?: ButtonConfig;
+  secondaryButton?: ButtonConfig;
+  background?: string; // image URL or color
+}
+
+const CtaSection: React.FC<CtaSectionProps> = ({
+  title,
+  subtitle,
+  primaryButton,
+  secondaryButton,
+  background,
+}) => {
+  const sectionStyle = background
+    ? background.startsWith("http") || background.startsWith("/")
+      ? { backgroundImage: `url(${background})` }
+      : { backgroundColor: background }
+    : {};
+
   return (
-    <section className="cta-section">
-      <div className="cta-container">
-        <h2 className="cta-title">Ready to Create Your Cinematic Journey?</h2>
-        <p className="cta-subtitle">
-          Let's turn your travel dreams into an unforgettable cinematic
-          experience
-        </p>
-        <div className="cta-buttons">
-          <button className="cta-button-outline">Chat on WhatsApp</button>
+<section className="cta-section" >
+      <div className="cta-overlay">
+        <div className="cta-container">
+          <h2 className="cta-title">{title}</h2>
+          <p className="cta-subtitle">{subtitle}</p>
+
+          <div className="cta-buttons">
+            {primaryButton && (
+              <button
+                className={`cta-button ${
+                  primaryButton.variant === "outline"
+                    ? "cta-button-outline"
+                    : "cta-button-solid"
+                }`}
+                onClick={primaryButton.onClick}
+              >
+                {primaryButton.label}
+              </button>
+            )}
+
+            {secondaryButton && (
+              <button
+                className={`cta-button ${
+                  secondaryButton.variant === "outline"
+                    ? "cta-button-outline"
+                    : "cta-button-solid"
+                }`}
+                onClick={secondaryButton.onClick}
+              >
+                {secondaryButton.label}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default CtaSection;
+
+
+    

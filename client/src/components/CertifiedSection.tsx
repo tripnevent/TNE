@@ -4,7 +4,7 @@ import "./CertifiedSection.css";
 
 const logos = [
   {
-    src: "/trip-event-main-logo.webp",
+    src: "/tnegreen.jpeg",
     alt: "Trip & Event - India",
     label: "India",
   },

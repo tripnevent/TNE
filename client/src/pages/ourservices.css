@@ -1,0 +1,158 @@
+.ourservices-container {
+  padding: 3rem 1rem;
+  background-color: var(--background, #0a0a0a);
+  color: #fff;
+  overflow: hidden;
+}
+
+.ourservices-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.ourservices-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* Filters */
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #888;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* Arrows */
+.navigation-arrows {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.arrow-btn {
+  background: #111;
+  color: #fff;
+  border: 1px solid #555;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Cards Slider */
+.services-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.services-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.service-card {
+  min-width: 320px;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: transform 0.6s ease;
+}
+
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-subtitle {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.service-btn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  font-weight: medium;
+  transition: all 0.3s ease;
+}
+
+/* .service-btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-card {
+    min-width: 280px;
+    height: 380px;
+  }
+
+  .ourservices-title {
+    font-size: 2rem;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

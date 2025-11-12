@@ -2,7 +2,7 @@ import CertifiedSection from './CertifiedSection';
 import './footer.css';
 import { useLocation } from 'wouter';
 import { useEffect, useState } from 'react';
-import { ArrowUp } from 'lucide-react'; // Lucide icon
+import { ArrowUp, Instagram, Facebook, Youtube , Linkedin } from 'lucide-react'; // Added icons
 
 export default function Footer() {
   const [, navigate] = useLocation();
@@ -40,7 +40,6 @@ export default function Footer() {
   return (
     <>
       <footer className="footer">
-        {/* <MapComponent /> */}
         <CertifiedSection />
         <div className="footer-container">
           <div className="footer-grid">
@@ -54,21 +53,11 @@ export default function Footer() {
             <div>
               <h4 className="footer-heading">Quick Links</h4>
               <ul className="footer-list">
-                <li>
-                  <button onClick={() => navigate('/destinations')}>
-                    Destinations
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => navigate('/experiences')}>
-                    Experiences
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => navigate('/how-it-works')}>
-                    How It Works
-                  </button>
-                </li>
+                  <li><button onClick={() => navigate('/yacht')}>Yacht</button></li>
+                <li><button onClick={() => navigate('/destinations')}>Destinations</button></li>
+              
+                <li><button onClick={() => navigate('/experiences')}>Experiences</button></li>
+                <li><button onClick={() => navigate('/how-it-works')}>How It Works</button></li>
               </ul>
             </div>
 
@@ -76,38 +65,24 @@ export default function Footer() {
             <div>
               <h4 className="footer-heading">Contact</h4>
               <ul className="footer-list">
-                <li>
-                  <a href="mailto:hello@tripandevent.com">
-                    hello@tripandevent.com
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+91 900 700 0777">+91 900 700 0777</a>
-                </li>
-                <li>
-                  <button
-                    className="get-in-touch"
-                    onClick={() => navigate('/contact')}
-                  >
+                 <li>
+                  <button className="get-in-touch" onClick={() => navigate('/contact')}>
                     Get in Touch
                   </button>
                 </li>
+                 <li><a href="tel:+91 900 700 0777">+91 900 700 0777</a></li>
+                <li><a href="mailto:hello@tripandevent.com">hello@tripandevent.com</a></li>
               </ul>
             </div>
 
-            {/* Social */}
+            {/* Social Icons */}
             <div>
               <h4 className="footer-heading">Follow Us</h4>
-              <ul className="footer-list">
-                <li>
-                  <a href="#">Instagram</a>
-                </li>
-                <li>
-                  <a href="#">Facebook</a>
-                </li>
-                <li>
-                  <a href="#">YouTube</a>
-                </li>
+              <ul className="footer-icons">
+                <li><a href="#"><Instagram className="social-icon" /></a></li>
+                <li><a href="#"><Facebook className="social-icon" /></a></li>
+                <li><a href="#"><Youtube className="social-icon" /></a></li>
+                <li><a href="#"><Linkedin className="social-icon" /></a></li>
               </ul>
             </div>
           </div>

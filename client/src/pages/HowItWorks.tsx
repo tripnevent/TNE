@@ -5,7 +5,7 @@ import { useLocation } from 'wouter';
 import Faq from '@/components/Faq';
 import './HowItWorks.css';
 import Headeruse from '@/components/ui/Headeruse';
-import CTAReuse from '@/components/ui/CTAReuse';
+import CtaSection from '@/components/CtaSection';
 
 export default function HowItWorks() {
   const [, navigate] = useLocation();
@@ -100,12 +100,14 @@ export default function HowItWorks() {
       <Faq />
 
       {/* CTA Section */}
-      <CTAReuse
+      <CtaSection
         title="Ready to Start Your Journey?"
-        text="Let's create your cinematic travel experience today."
-        buttonText="Get Started Now"
-        buttonLink="/contact"
-        // white text
+        subtitle="Let's create your cinematic travel experience today."
+        primaryButton={{
+          label: 'Get Started Now',
+          onClick: () => navigate('/contact'),
+          variant: 'outline',
+        }}
       />
 
       <Footer />

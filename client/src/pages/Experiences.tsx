@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
 import './experiences.css';
 import Headeruse from '@/components/ui/Headeruse';
-import CTAReuse from '@/components/ui/CTAReuse';
+import CtaSection from '@/components/CtaSection';
 
 export default function Experiences() {
   const [, navigate] = useLocation();
@@ -96,14 +96,16 @@ export default function Experiences() {
       </section>
 
       {/* CTA Section */}
-     
-     <CTAReuse
-  title="Have a Different Idea?"
-  text="We specialize in creating custom cinematic experiences tailored to your unique needs."
-  buttonText="Discuss Your Idea"
-  buttonLink="/contact"
-/>
 
+      <CtaSection
+        title="Have a Different Idea?"
+        subtitle="We specialize in creating custom cinematic experiences tailored to your unique needs."
+        primaryButton={{
+          label: 'Contact Us',
+          onClick: () => navigate('/contact'),
+          variant: 'outline',
+        }}
+      />
 
       <Footer />
     </div>

@@ -1,70 +1,97 @@
-/* CTA Section */
 .cta-section {
-  padding: 5rem 1rem; /* smaller padding for mobile */
-  background-color: var(--color-black);
-  color: var(--accent-foreground);
+  position: relative;
+  width: 100%;
+  padding: 5rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
   text-align: center;
-}
-
-@media (min-width: 640px) {
-  .cta-section {
-    padding: 5rem 2rem; /* medium screens */
-  }
-}
-
-@media (min-width: 1024px) {
-  .cta-section {
-    padding: 5rem 6rem; /* large desktop spacing */
-  }
-}
-
-.cta-container {
-  max-width: 64rem; /* max-w-4xl */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-.cta-title {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 2.25rem;
-  margin-bottom: 1.5rem;
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-@media (min-width: 768px) {
-  .cta-title {
-    font-size: 3rem;
-  }
+.cta-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.cta-title {
+  font-size: 2rem !important;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: capitalize !important;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .cta-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.125rem;
-  opacity: 0.9;
+  font-size: 1.2rem;
+  color: #ddd;
   margin-bottom: 2rem;
 }
 
-/* Button Style */
-.cta-button-outline {
-  background-color: transparent;
-  color: var(--accent-foreground);
-  border: 2px solid var(--accent-foreground);
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.375rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  width: 100%; /* full width on mobile */
-  max-width: 18rem; /* prevent stretching too much */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-@media (min-width: 640px) {
-  .cta-button-outline {
-    width: auto; /* normal button on larger screens */
-  }
+/* Button Styles */
+.cta-button {
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.cta-button-solid {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+
+.cta-button-solid:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.cta-button-outline {
+  background: black;
+  border: 1px solid #fff;
+  color: #ffffff;
 }
 
 .cta-button-outline:hover {
-  background-color: var(--accent-foreground);
-  color: var(--color-black);
+  background: #fff;
+  color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-section {
+    padding: 4rem 1rem;
+  }
+}
+
+
