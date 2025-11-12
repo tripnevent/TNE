@@ -6,6 +6,7 @@
   font-family: 'Inter', sans-serif;
   justify-content: center;
   align-items: center;
+  padding-top: 0 !important;
   text-align: left; /* ✅ Changed from center to left */
 }
 

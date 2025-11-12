@@ -1,10 +1,10 @@
-import React from "react";
-import "./ctaSection.css";
+import React from 'react';
+import './ctaSection.css';
 
 interface ButtonConfig {
   label: string;
   onClick?: () => void;
-  variant?: "solid" | "outline";
+  variant?: 'solid' | 'outline';
 }
 
 interface CtaSectionProps {
@@ -23,38 +23,36 @@ const CtaSection: React.FC<CtaSectionProps> = ({
   background,
 }) => {
   const sectionStyle = background
-    ? background.startsWith("http") || background.startsWith("/")
+    ? background.startsWith('http') || background.startsWith('/')
       ? { backgroundImage: `url(${background})` }
       : { backgroundColor: background }
     : {};
 
   return (
-<section className="cta-section" >
+    <section className="cta-section" style={sectionStyle}>
       <div className="cta-overlay">
         <div className="cta-container">
           <h2 className="cta-title">{title}</h2>
           <p className="cta-subtitle">{subtitle}</p>
-
           <div className="cta-buttons">
             {primaryButton && (
               <button
                 className={`cta-button ${
-                  primaryButton.variant === "outline"
-                    ? "cta-button-outline"
-                    : "cta-button-solid"
+                  primaryButton.variant === 'outline'
+                    ? 'cta-button-outline'
+                    : 'cta-button-solid'
                 }`}
                 onClick={primaryButton.onClick}
               >
                 {primaryButton.label}
               </button>
             )}
-
             {secondaryButton && (
               <button
                 className={`cta-button ${
-                  secondaryButton.variant === "outline"
-                    ? "cta-button-outline"
-                    : "cta-button-solid"
+                  secondaryButton.variant === 'outline'
+                    ? 'cta-button-outline'
+                    : 'cta-button-solid'
                 }`}
                 onClick={secondaryButton.onClick}
               >
@@ -69,6 +67,3 @@ const CtaSection: React.FC<CtaSectionProps> = ({
 };
 
 export default CtaSection;
-
-
-    
