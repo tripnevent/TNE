@@ -2,7 +2,7 @@ import { useLocation } from 'wouter';
 import './hero.css';
 
 export default function Hero() {
-  const [location, navigate] = useLocation();
+  const [, navigate] = useLocation();
 
   const handleButtonClick = () => {
     console.log('Navigating to start journey...');
@@ -17,18 +17,16 @@ export default function Hero() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Animated Grain Overlay */}
+      {/* Grain & Overlay handled in CSS */}
       <div className="grain-overlay"></div>
 
+      {/* Content */}
       <div className="hero-container">
         <h1 className="hero-title">TRIP AND EVENT</h1>
         <p className="hero-subtitle">CURATED LUXURY TRAVEL EXPERIENCES</p>
 
         <div className="hero-buttons">
-          <button
-            className="hero-button hero-button-outline"
-            onClick={handleButtonClick}
-          >
+          <button className="hero-button" onClick={handleButtonClick}>
             START YOUR JOURNEY
           </button>
         </div>
