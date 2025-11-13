@@ -121,7 +121,7 @@ const OurServices: React.FC = () => {
   return (
     <section className="ourservices-container">
       <header className="ourservices-header">
-        <h2 className="ourservices-title">OUR SERVICES</h2>
+        <h2 className="ourservices-title">CINETRIP OFFERINGS</h2>
       </header>
 
       <div className="filter-controls">

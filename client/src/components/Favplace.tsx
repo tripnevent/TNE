@@ -46,7 +46,7 @@ const places = [
 const FavPlace = () => {
   return (
     <div className="fav-place-container">
-      <h2 className="fav-place-title">TRENDING-DESTINATION</h2>
+      <h2 className="fav-place-title">TRENDING DESTINATIONS</h2>
       <div className="fav-place-grid">
         {places.map((place) => (
           <div key={place.name} className={`fav-place-card ${place.className}`}>

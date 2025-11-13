@@ -68,7 +68,7 @@ const TrendingDestinations: React.FC = () => {
   return (
     <div className="destinations-container">
       <div className="destinations-header">
-        <h2 className="destinations-title">DESTINATIONS</h2>
+        <h2 className="destinations-title">ACROSS THE GLOBE</h2>
       </div>
 
       <div className="filter-buttons">

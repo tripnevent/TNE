@@ -41,7 +41,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       <div className="testimonials-header">
-        <h2 className="testimonials-title">What Our Travelers Say</h2>
+        <h2 className="testimonials-title">Meet our happy faces</h2>
         <p className="testimonials-subtitle">Real stories from real adventures</p>
           <div className="testimonial-review">
         <p className="testimonial-text">{text}</p>
