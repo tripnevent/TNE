@@ -8,8 +8,8 @@ import { ClipLoader } from "react-spinners";
 
 // Lazy load pages
 const Home = lazy(() => import("./pages/Home"));
-const Destinations = lazy(() => import("./pages/Destinations"));
-const Experiences = lazy(() => import("./pages/Experiences"));
+const Destinations = lazy(() => import("./pages/DestinationsPage"));
+const Experiences = lazy(() => import("./pages/ExperiencesPage"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Yacht = lazy(() => import("./pages/Yacht"));

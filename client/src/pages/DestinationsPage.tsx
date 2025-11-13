@@ -3,12 +3,12 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
-import './destinations.css';
+import './destinationsPage.css';
 import Headeruse from '@/components/ui/Headeruse';
 import CtaSection from '@/components/CtaSection';
 import { Loader2 } from 'lucide-react';
 
-export default function Destinations() {
+export default function DestinationsPage() {
   const [, navigate] = useLocation();
 
   const destinations = [
@@ -62,7 +62,7 @@ export default function Destinations() {
   ];
 
   return (
-    <div className="destinations-all-page">
+    <div className="destination-page">
       <Suspense
         fallback={
           <div className="flex items-center justify-center min-h-[50vh] text-white">
@@ -80,35 +80,35 @@ export default function Destinations() {
           textColor="#fff"
         />
 
-        <section className="destinations-all-grid-section">
-          <div className="destinations-all-grid-container">
+        <section className="destination-page-grid-section">
+          <div className="destination-page-grid-container">
             {destinations.map((dest) => (
-              <div key={dest.name} className="destination-all-card">
-                <div className="destination-all-image">
+              <div key={dest.name} className="destination-page-card">
+                <div className="destination-page-image">
                   <img
                     src={`/${dest.name.toLowerCase()}.jpg`}
                     alt={`Beautiful view of ${dest.name}`}
-                    className="destination-all-img"
+                    className="destination-page-img"
                     loading="lazy"
                   />
                 </div>
 
-                <div className="destination-all-content">
-                  <h3 className="destination-all-title">{dest.name}</h3>
-                  <p className="destination-all-tagline">{dest.tagline}</p>
-                  <p className="destination-all-description">
+                <div className="destination-page-content">
+                  <h3 className="destination-page-title">{dest.name}</h3>
+                  <p className="destination-page-tagline">{dest.tagline}</p>
+                  <p className="destination-page-description">
                     {dest.description}
                   </p>
 
-                  <div className="destination-all-info">
+                  <div className="destination-page-info">
                     <span>{dest.packages} Packages</span>
-                    <span className="destination-all-price">
+                    <span className="destination-page-price">
                       From {dest.price}
                     </span>
                   </div>
 
                   <Button
-                    className="destination-all-button"
+                    className="destination-page-button"
                     onClick={() => navigate('/contact')}
                   >
                     View Packages

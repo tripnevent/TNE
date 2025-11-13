@@ -8,7 +8,7 @@
 }
 
 /* ==============================
-   Outer Section Wrapper
+   Outer Wrapper
    ============================== */
 .experiences-page {
   min-height: 100vh;
@@ -16,95 +16,49 @@
   flex-direction: column;
   background-color: var(--background);
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 /* ==============================
-   Page Header
+   Grid Section
    ============================== */
-.experiences-header-section {
-  padding: 4rem 1rem; /* mobile first */
-  background-color: var(--color-black);
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .experiences-header-section {
-    padding: 4rem 2rem;
-  }
-}
-
-.experiences-header-section h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 2.25rem; /* mobile */
-  color: var(--foreground);
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-  .experiences-header-section h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .experiences-header-section h1 {
-    font-size: 4rem;
-  }
-}
-
-.experiences-header-section p {
-  font-size: 1rem;
-  color: var(--muted-foreground);
-}
-
-@media (min-width: 768px) {
-  .experiences-header-section p {
-    font-size: 1.125rem;
-  }
-}
-
-/* ==============================
-   Experiences Grid Section
-   ============================== */
-.experiences-grid-section {
+.experiences-page-grid-section {
   flex: 1;
   padding: 4rem 1rem;
   background-color: var(--background);
 }
 
 @media (min-width: 640px) {
-  .experiences-grid-section {
+  .experiences-page-grid-section {
     padding: 5rem 2rem;
   }
 }
 
-.experiences-grid-container {
+.experiences-page-grid-container {
   max-width: 96rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 5px;
+  gap: 10px;
 }
 
 @media (min-width: 768px) {
-  .experiences-grid-container {
+  .experiences-page-grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
 @media (min-width: 1024px) {
-  .experiences-grid-container {
+  .experiences-page-grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* ==============================
-   Individual Experience Card
+   Experience Card
    ============================== */
-.experience-card {
+.experiences-page-card {
   background-color: var(--card);
   display: flex;
   flex-direction: column;
@@ -113,9 +67,8 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
-
 /* Image Section */
-.experience-image {
+.experiences-page-image {
   background-color: var(--muted);
   height: 12rem;
   display: flex;
@@ -124,14 +77,14 @@
   text-align: center;
 }
 
-.experience-image-text {
+.experiences-page-image-text {
   font-size: 1rem;
   color: var(--muted-foreground);
-  padding: 0 0.5rem; /* prevent overflow */
+  padding: 0 0.5rem;
 }
 
 /* Content Section */
-.experience-content {
+.experiences-page-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -140,7 +93,7 @@
   padding: 1.25rem;
 }
 
-.experience-title {
+.experiences-page-title {
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-size: 1.25rem;
@@ -149,22 +102,21 @@
 }
 
 @media (min-width: 768px) {
-  .experience-title {
+  .experiences-page-title {
     font-size: 1.5rem;
   }
 }
 
-.experience-description,
-.experience-details {
-
+.experiences-page-description,
+.experiences-page-details {
   font-size: 0.875rem;
-  color: white ;
+  color: white;
   margin-bottom: 1rem;
   font-family: "Inter", sans-serif;
   line-height: 1.5;
 }
 
-.experience-duration {
+.experiences-page-duration {
   font-size: 0.875rem;
   font-weight: 600;
   color: white;
@@ -173,8 +125,8 @@
   padding-bottom: 0.5rem;
 }
 
-/* Card Button */
-.experience-button {
+/* Button */
+.experiences-page-button {
   width: 100%;
   padding: 0.75rem 1rem;
   font-weight: 600;
@@ -187,7 +139,7 @@
   margin-top: 1rem;
 }
 
-.experience-button:hover {
+.experiences-page-button:hover {
   background-color: var(--accent-foreground);
   color: black;
 }
@@ -195,19 +147,19 @@
 /* ==============================
    CTA Section
    ============================== */
-.experiences-cta-section {
+.experiences-page-cta-section {
   padding: 4rem 1rem;
   background-color: var(--color-black);
   text-align: center;
 }
 
 @media (min-width: 640px) {
-  .experiences-cta-section {
+  .experiences-page-cta-section {
     padding: 5rem 2rem;
   }
 }
 
-.experiences-cta-title {
+.experiences-page-cta-title {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 2rem;
@@ -216,24 +168,19 @@
 }
 
 @media (min-width: 768px) {
-  .experiences-cta-title {
+  .experiences-page-cta-title {
     font-size: 2.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .experiences-cta-title {
+  .experiences-page-cta-title {
     font-size: 3rem;
   }
 }
 
-.experiences-cta-text {
+.experiences-page-cta-text {
   font-size: 1rem;
   color: var(--muted-foreground);
   margin-bottom: 2rem;
-}
-
-.experiences-cta .experience-button {
-  max-width: 300px !important;
-  margin: 0 auto;
 }

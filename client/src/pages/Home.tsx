@@ -12,10 +12,10 @@ const FeaturedExperiences = lazy(
   () => import('@/components/FeaturedExperiences')
 );
 const TrendingDestinations = lazy(
-  () => import('@/components/TrendingDestinations')
+  () => import('@/components/AcrossTheGlobe')
 );
 const Testimonials = lazy(() => import('@/components/Testimonials'));
-const Favplace = lazy(() => import('@/components/Favplace'));
+const Favplace = lazy(() => import('@/components/TrendingDestinations'));
 const OurServices = lazy(() => import('./OurServices'));
 
 export default function Home() {

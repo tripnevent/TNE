@@ -5,23 +5,25 @@ body {
   color: #ffffff;
 }
 
-.destinations-container {
+/* ==============================
+   Across The Globe Section
+   ============================== */
+.acrosstheglobe-container {
   width: 100%;
-  /* max-width: 1200px; */
   margin: 40px auto;
   padding: 20px;
   box-sizing: border-box;
   background-color: #000000;
 }
 
-.destinations-header {
+.acrosstheglobe-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.destinations-title {
+.acrosstheglobe-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 24px;
   font-weight: 700;
@@ -29,7 +31,10 @@ body {
   margin: 0;
 }
 
-.navigation-arrows .arrow-btn {
+/* ==============================
+   Navigation Arrows
+   ============================== */
+.acrosstheglobe-navigation-arrows .acrosstheglobe-arrow-btn {
   background-color: transparent;
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -40,28 +45,32 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   margin-left: 10px;
+  transition: all 0.3s ease;
 }
 
-.navigation-arrows .arrow-btn:hover {
+.acrosstheglobe-navigation-arrows .acrosstheglobe-arrow-btn:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
-.filter-buttons {
+/* ==============================
+   Filter Buttons
+   ============================== */
+.acrosstheglobe-filter-buttons {
   display: flex;
   gap: 10px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
   margin-bottom: 30px;
 }
-.filter-btn-group {
+
+.acrosstheglobe-filter-btn-group {
   display: flex;
   gap: 10px;
 }
 
-.filter-btn {
+.acrosstheglobe-filter-btn {
   font-family: 'Inter', sans-serif;
   background-color: transparent;
   color: #ffffff;
@@ -70,42 +79,47 @@ body {
   border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-.filter-btn.active {
+.acrosstheglobe-filter-btn.active {
   background-color: #ffffff;
   color: #000000;
   border-color: #ffffff;
 }
 
-.filter-btn:hover {
+.acrosstheglobe-filter-btn:hover {
   background-color: #333333;
 }
 
-.filter-btn.active:hover {
+.acrosstheglobe-filter-btn.active:hover {
   background-color: #ffffff;
 }
 
-.destinations-grid {
+/* ==============================
+   Destination Grid
+   ============================== */
+.acrosstheglobe-grid {
   display: flex;
   gap: 20px;
   height: 340px;
-  overflow-x: auto; /* Allows horizontal scrolling if needed */
-  padding-bottom: 10px;
-  padding-top: 10px; /* For scrollbar visibility */
+  overflow-x: auto;
+  padding: 10px 0;
 }
 
-/* Hide scrollbar for a cleaner look */
-.destinations-grid::-webkit-scrollbar {
+/* Hide scrollbar */
+.acrosstheglobe-grid::-webkit-scrollbar {
   display: none;
 }
-
-.destinations-grid {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+.acrosstheglobe-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.destination-card {
+/* ==============================
+   Destination Card
+   ============================== */
+.acrosstheglobe-card {
   position: relative;
   min-width: 220px;
   height: 300px;
@@ -119,7 +133,7 @@ body {
   justify-content: flex-end;
 }
 
-.card-overlay {
+.acrosstheglobe-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -128,33 +142,17 @@ body {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
-/* .card-subtitle {
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  margin: 0 0 5px 0;
-  text-transform: uppercase;
-  padding-left: 10px;
-} */
-
-.card-title {
+.acrosstheglobe-title-text {
   font-size: 1.2rem;
   font-weight: 600;
   padding-left: 10px;
   margin: 0;
 }
 
-.card-subtitle {
+.acrosstheglobe-subtitle-text {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: #ddd;
   padding-left: 10px;
 }
-
-/* .card-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
-  font-weight: 700;
-  padding-left: 10px;
-  margin: 0;
-} */
