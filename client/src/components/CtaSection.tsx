@@ -1,10 +1,10 @@
-import React from 'react';
-import './ctaSection.css';
+import React from "react";
+import "./ctaSection.css";
 
 interface ButtonConfig {
   label: string;
   onClick?: () => void;
-  variant?: 'solid' | 'outline';
+  variant?: "solid" | "outline" | "experience";
 }
 
 interface CtaSectionProps {
@@ -12,7 +12,6 @@ interface CtaSectionProps {
   subtitle: string;
   primaryButton?: ButtonConfig;
   secondaryButton?: ButtonConfig;
-  background?: string; // image URL or color
 }
 
 const CtaSection: React.FC<CtaSectionProps> = ({
@@ -20,10 +19,42 @@ const CtaSection: React.FC<CtaSectionProps> = ({
   subtitle,
   primaryButton,
   secondaryButton,
-  background,
 }) => {
-  const sectionStyle = {
-    backgroundColor: '#000',
+  const sectionStyle: React.CSSProperties = {
+    backgroundColor: "#000", // fixed background
+    color: "#fff",
+  };
+
+  const renderButton = (btn: ButtonConfig) => {
+    if (btn.variant === "experience") {
+      return (
+        <button
+          className="experiences-page-button"
+          onClick={() => {
+            btn.onClick?.();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          {btn.label}
+        </button>
+      );
+    }
+
+    return (
+      <button
+        className={`cta-button ${
+          btn.variant === "outline"
+            ? "cta-button-outline"
+            : "cta-button-solid"
+        }`}
+        onClick={() => {
+          btn.onClick?.();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
+        {btn.label}
+      </button>
+    );
   };
 
   return (
@@ -33,36 +64,8 @@ const CtaSection: React.FC<CtaSectionProps> = ({
           <h2 className="cta-title">{title}</h2>
           <p className="cta-subtitle">{subtitle}</p>
           <div className="cta-buttons">
-            {primaryButton && (
-              <button
-                className={`cta-button ${
-                  primaryButton.variant === 'outline'
-                    ? 'cta-button-outline'
-                    : 'cta-button-solid'
-                }`}
-                onClick={() => {
-                  primaryButton.onClick?.();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-              >
-                {primaryButton.label}
-              </button>
-            )}
-            {secondaryButton && (
-              <button
-                className={`cta-button ${
-                  secondaryButton.variant === 'outline'
-                    ? 'cta-button-outline'
-                    : 'cta-button-solid'
-                }`}
-                onClick={() => {
-                  secondaryButton.onClick?.();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-              >
-                {secondaryButton.label}
-              </button>
-            )}
+            {primaryButton && renderButton(primaryButton)}
+            {secondaryButton && renderButton(secondaryButton)}
           </div>
         </div>
       </div>

@@ -1,56 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600&display=swap');
+
+/* ==============================
+   CTA Section (Fixed Design)
+   ============================== */
+
 .cta-section {
   position: relative;
   width: 100%;
-  height: 50vh; /* full screen height */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-  display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;     /* center vertically */
-  text-align: center;
-  overflow: hidden;
-}
-
-/* Dark overlay across the background */
-.cta-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  min-height: 60vh;
+  background: #000 !important; /* always black */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  text-align: center;
+  color: #fff !important;
 }
 
-/* Content container centered above overlay */
+/* Overlay (for depth & contrast) */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Container for content */
 .cta-container {
   position: relative;
   z-index: 2;
   max-width: 800px;
   width: 100%;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
+/* Heading */
 .cta-title {
-  font-size: 2.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   text-transform: capitalize;
-  font-family: "Cormorant Garamond", serif;
+  color: #fff;
 }
 
+/* Subtitle */
 .cta-subtitle {
-  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
   color: #ddd;
   margin-bottom: 2rem;
-  font-family: "Inter", sans-serif;
+  line-height: 1.6;
 }
 
+/* Buttons layout */
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -58,32 +64,40 @@
   gap: 1rem;
 }
 
-/* Button Styles */
+/* Generic Button */
 .cta-button {
   padding: 0.8rem 1.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  font-style: 'Inter', sans-serif !important;
-  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 1rem;
-  border-radius: 30px;
-}
-
-.cta-button-solid {
-  background: #000;
+  border: 1px solid white;
+  background: transparent;
   color: #fff;
-  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.cta-button-solid:hover {
+.cta-button:hover {
   background: #fff;
   color: #000;
 }
 
+/* Variant: Solid */
+.cta-button-solid {
+  background: #fff;
+  color: #000;
+}
+
+.cta-button-solid:hover {
+  background: transparent;
+  color: #fff;
+}
+
+/* Variant: Outline */
 .cta-button-outline {
   background: transparent;
-  border: 1px solid #fff;
   color: #fff;
+  border: 1px solid #fff;
 }
 
 .cta-button-outline:hover {
@@ -91,21 +105,45 @@
   color: #000;
 }
 
-@media (max-width: 768px) {
-  .cta-section {
-    height: 90vh;
-    padding: 3rem 1rem;
-  }
+/* Variant: Experience-style button */
+.experiences-page-button {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.75rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #fff !important;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
 
+.experiences-page-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .cta-title {
     font-size: 2rem;
   }
 
   .cta-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .cta-buttons {
     flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .cta-button,
+  .experiences-page-button {
+    width: 100%;
+    max-width: 100%;
   }
 }

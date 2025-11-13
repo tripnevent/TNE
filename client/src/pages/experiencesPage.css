@@ -129,7 +129,8 @@
 .experiences-page-button {
   width: 100%;
   padding: 0.75rem 1rem;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: small;
   font-family: 'Inter', sans-serif;
   background-color: black;
   color: var(--accent-foreground);
@@ -142,45 +143,4 @@
 .experiences-page-button:hover {
   background-color: var(--accent-foreground);
   color: black;
-}
-
-/* ==============================
-   CTA Section
-   ============================== */
-.experiences-page-cta-section {
-  padding: 4rem 1rem;
-  background-color: var(--color-black);
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .experiences-page-cta-section {
-    padding: 5rem 2rem;
-  }
-}
-
-.experiences-page-cta-title {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--foreground);
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .experiences-page-cta-title {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .experiences-page-cta-title {
-    font-size: 3rem;
-  }
-}
-
-.experiences-page-cta-text {
-  font-size: 1rem;
-  color: var(--muted-foreground);
-  margin-bottom: 2rem;
 }

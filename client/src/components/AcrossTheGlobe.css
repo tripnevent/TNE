@@ -78,7 +78,7 @@ body {
   padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: small;
   transition: all 0.3s ease;
 }
 
@@ -145,14 +145,15 @@ body {
 .acrosstheglobe-title-text {
   font-size: 1.2rem;
   font-weight: 600;
+  font-style: 'Cormorant Garamond', serif;
   padding-left: 10px;
   margin: 0;
 }
 
 .acrosstheglobe-subtitle-text {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif !important;
   color: #ddd;
   padding-left: 10px;
 }
