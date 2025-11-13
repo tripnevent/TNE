@@ -1,4 +1,5 @@
 import "./featuredExperiences.css";
+import { useLocation } from "wouter"; // ✅ Import for navigation
 import { Button } from "@/components/ui/button";
 
 const experiences = [
@@ -6,8 +7,8 @@ const experiences = [
     title: "Music Album Trip",
     description: "Create your personal music video while traveling to exotic destinations",
     duration: "5 Nights / 6 Days",
-    video: "/music-album.mp4", // local mp4
-    type: "video", // "video" | "youtube"
+    video: "/music-album.mp4",
+    type: "video",
   },
   {
     title: "Pre-Wedding Shoot",
@@ -26,6 +27,8 @@ const experiences = [
 ];
 
 export default function FeaturedExperiences() {
+  const [location, navigate] = useLocation(); // ✅ Hook for navigation
+
   return (
     <section className="featured-experiences">
       <div className="featured-experiences-container">
@@ -63,11 +66,22 @@ export default function FeaturedExperiences() {
                   ></iframe>
                 )}
               </div>
+
               <div className="featured-experience-content">
                 <h3 className="featured-experience-title">{exp.title}</h3>
                 <p className="featured-experience-description">{exp.description}</p>
                 <p className="featured-experience-duration">{exp.duration}</p>
-                <button className="featured-experience-button">View Details</button>
+
+                {/* ✅ Navigate to contact & scroll to top */}
+                <button
+                  className="featured-experience-button"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate("/contact");
+                  }}
+                >
+                  View Details
+                </button>
               </div>
             </div>
           ))}
