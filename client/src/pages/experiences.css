@@ -156,8 +156,9 @@
 
 .experience-description,
 .experience-details {
+
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: white ;
   margin-bottom: 1rem;
   font-family: "Inter", sans-serif;
   line-height: 1.5;
