@@ -1,130 +1,205 @@
-import { useState } from 'react';
+import CertifiedSection from './CertifiedSection';
+import './footer.css';
 import { useLocation } from 'wouter';
-import { Menu, X, MessageSquareMore } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import {
-  FaWhatsapp,
-  FaInstagram,
-  FaYoutube,
-  FaLinkedin,
-  FaFacebook,
-} from 'react-icons/fa';
-import './navigation.css';
+  ArrowUp,
+  Instagram,
+  Facebook,
+  Youtube,
+  Linkedin,
+  MessageCircle,
+} from 'lucide-react'; // Added icons
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [location, navigate] = useLocation();
+export default function Footer() {
+  const [, navigate] = useLocation();
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Experiences', href: '/experiences' },
-    { label: 'Destinations', href: '/destinations' },
-    { label: 'Yacht', href: '/yacht' },
-    { label: 'How It Works', href: '/how-it-works' },
-    { label: <MessageSquareMore size={20} />, href: '/contact' },
-  ];
+  // Detect when user reaches near footer
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const footer = document.querySelector('.footer');
+      if (!footer) return;
 
-  const isActive = (href: string) => location === href;
+      const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+      // Show button when user is within 300px of footer
+      if (scrollPosition >= footerTop - 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToHero = () => {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      hero.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        {/* Logo */}
-        <div className="navbar-logo" onClick={() => navigate('/')}>
-          <img
-            src="/tnegreen.jpeg"
-            alt="Trip & Event Logo"
-            className="navbar-logo-img"
-          />
-          <span className="navbar-logo-text">Trip & Event</span>
-        </div>
+    <>
+      <footer className="footer">
+        <CertifiedSection />
+        <div className="footer-container">
+          <div className="footer-grid">
+            {/* Brand */}
+            <div className="footer-brand">
+              <h3>TRIP & EVENT</h3>
+              <p>Creating cinematic travel experiences that last forever.</p>
+            </div>
 
-        {/* Desktop Links */}
-        <div className="navbar-links">
-          {navItems.map((item) => (
-            <button
-              key={item.href}
-              onClick={() => navigate(item.href)}
-              className={`navbar-link ${isActive(item.href) ? 'active' : ''}`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+            {/* Quick Links */}
+            <div>
+              <h4 className="footer-heading">Quick Links</h4>
+              <ul className="footer-list">
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate('/yacht');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    Yacht
+                  </button>
+                </li>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="navbar-menu-button"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={26} />}
-        </button>
-      </div>
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate('/destinations');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    Destinations
+                  </button>
+                </li>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="navbar-mobile">
-          {/* Close Button (visible on top-right) */}
-          <button
-            className="navbar-close"
-            onClick={() => setIsOpen(false)}
-            aria-label="Close menu"
-          >
-            <X size={28} />
-          </button>
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate('/experiences');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    Experiences
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate('/how-it-works');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    How It Works
+                  </button>
+                </li>
+              </ul>
+            </div>
 
-          {navItems.map((item) => (
-            <button
-              key={item.href}
-              onClick={() => {
-                navigate(item.href);
-                setIsOpen(false);
-              }}
-              className={`navbar-link ${isActive(item.href) ? 'active' : ''}`}
-            >
-              {item.label}
-            </button>
-          ))}
+            {/* Contact */}
+            <div>
+              <h4 className="footer-heading">Contact</h4>
+              <ul className="footer-list">
+                <li>
+                  <button
+                    className="get-in-touch"
+                    onClick={() => {
+                      navigate('/contact');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                    Get in Touch
+                  </button>
+                </li>
+                <li>
+                  <a href="tel:+91 900 700 0777">+91 900 700 0777</a>
+                </li>
+                <li>
+                  <a href="mailto:hello@tripandevent.com">
+                    hello@tripandevent.com
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Social Icons */}
-          <div className="navbar-social">
-            <a
-              href="https://wa.me/919007000777"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaWhatsapp size={20} />
-            </a>
-            <a
-              href="https://www.instagram.com/tripandevent/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram size={20} />
-            </a>
-            <a
-              href="https://www.youtube.com/@tripandevent?si=Mvgxlpary9tfHTBs"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/trip-and-event/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin size={20} />
-            </a>
-            <a
-              href="https://www.facebook.com/share/1Bw8BXmaS2/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebook size={20} />
-            </a>
+            {/* Social Icons */}
+            <div>
+              <h4 className="footer-heading">Follow Us</h4>
+              <ul className="footer-icons">
+                <li>
+                  <a
+                    href="https://www.instagram.com/tripandevent/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram className="social-icon" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.facebook.com/share/1Bw8BXmaS2/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook className="social-icon" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.youtube.com/@tripandevent?si=Mvgxlpary9tfHTBs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Youtube className="social-icon" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/trip-and-event/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin className="social-icon" />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://wa.me/919007000777"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="social-icon" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <p>&copy; 2024 Trip & Event. All rights reserved.</p>
           </div>
         </div>
+      </footer>
+
+      {/* Floating Scroll-to-Top Button */}
+      {showScrollTop && (
+        <button className="scroll-to-top" onClick={scrollToHero}>
+          <ArrowUp size={22} />
+        </button>
       )}
-    </nav>
+    </>
   );
 }

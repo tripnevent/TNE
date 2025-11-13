@@ -6,12 +6,11 @@ import { useLocation } from 'wouter';
 import './destinations.css';
 import Headeruse from '@/components/ui/Headeruse';
 import CtaSection from '@/components/CtaSection';
-import { Loader2 } from 'lucide-react'; // optional spinner icon
+import { Loader2 } from 'lucide-react';
 
 export default function Destinations() {
   const [, navigate] = useLocation();
 
-  // ✅ Static data kept clean & reusable
   const destinations = [
     {
       name: 'Dubai',
@@ -63,8 +62,7 @@ export default function Destinations() {
   ];
 
   return (
-    <div className="destinations-page">
-      {/* Navigation */}
+    <div className="destinations-all-page">
       <Suspense
         fallback={
           <div className="flex items-center justify-center min-h-[50vh] text-white">
@@ -75,7 +73,6 @@ export default function Destinations() {
       >
         <Navigation />
 
-        {/* Header */}
         <Headeruse
           title="All Destinations"
           subtitle="Explore cinematic journeys around the world"
@@ -83,32 +80,35 @@ export default function Destinations() {
           textColor="#fff"
         />
 
-        {/* Destinations Grid */}
-        <section className="destinations-grid-section">
-          <div className="destinations-grid-container">
+        <section className="destinations-all-grid-section">
+          <div className="destinations-all-grid-container">
             {destinations.map((dest) => (
-              <div key={dest.name} className="destination-card">
-                <div className="destination-image">
+              <div key={dest.name} className="destination-all-card">
+                <div className="destination-all-image">
                   <img
                     src={`/${dest.name.toLowerCase()}.jpg`}
                     alt={`Beautiful view of ${dest.name}`}
-                    className="destination-img"
+                    className="destination-all-img"
                     loading="lazy"
                   />
                 </div>
 
-                <div className="destination-content">
-                  <h3 className="destination-title">{dest.name}</h3>
-                  <p className="destination-tagline">{dest.tagline}</p>
-                  <p className="destination-description">{dest.description}</p>
+                <div className="destination-all-content">
+                  <h3 className="destination-all-title">{dest.name}</h3>
+                  <p className="destination-all-tagline">{dest.tagline}</p>
+                  <p className="destination-all-description">
+                    {dest.description}
+                  </p>
 
-                  <div className="destination-info">
+                  <div className="destination-all-info">
                     <span>{dest.packages} Packages</span>
-                    <span className="destination-price">From {dest.price}</span>
+                    <span className="destination-all-price">
+                      From {dest.price}
+                    </span>
                   </div>
 
                   <Button
-                    className="destination-button"
+                    className="destination-all-button"
                     onClick={() => navigate('/contact')}
                   >
                     View Packages
@@ -119,7 +119,6 @@ export default function Destinations() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <CtaSection
           title="Can't Find Your Dream Destination?"
           subtitle="We can create custom packages for any destination you have in mind."
@@ -130,7 +129,6 @@ export default function Destinations() {
           }}
         />
 
-        {/* Footer */}
         <Footer />
       </Suspense>
     </div>
