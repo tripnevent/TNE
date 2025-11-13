@@ -11,7 +11,7 @@ export default function AboutTravel() {
       <div className="about-travel-container">
         <div className="about-travel-content">
           {/* The text content is from the user's second request */}
-          <h2 className="about-travel-title">A Modern Approach to Travel</h2>
+          <h2 className="about-travel-title">Modern Approach to Travel</h2>
           <p className="about-travel-paragraph">
             Trip & Event is recognized as the epitome of cinematic travel
             experiences. For nearly a decade, we have been creating journeys

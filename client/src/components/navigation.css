@@ -35,11 +35,20 @@
 }
 
 .navbar-logo-text {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 500;
   color: #fff;
   letter-spacing: 0.03em;
+}
+
+@media (max-width: 480px) {
+  .navbar-logo-text {
+    font-size: large;
+  }
+  .navbar-logo-img {
+    display: none;
+  }
 }
 
 /* ---------------- DESKTOP LINKS ---------------- */
@@ -50,7 +59,7 @@
 }
 
 .navbar-link {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background: none;
   border: none;
   color: #fff;
@@ -127,7 +136,10 @@
   cursor: pointer;
   z-index: 110;
   font-size: 1.5rem;
-  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 /* Subtle hover animation (rotation + fade) */
@@ -136,7 +148,6 @@
   color: #ccc;
   opacity: 0.8;
 }
-
 
 .navbar-mobile .navbar-link {
   width: 100%;
@@ -162,11 +173,12 @@
 
 .navbar-social a {
   color: #fff;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .navbar-social a:hover {
   transform: scale(1.2);
   color: #ccc;
 }
-
