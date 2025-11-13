@@ -129,8 +129,8 @@
 
 .destination-all-price {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--foreground);
   margin-bottom: 0.5rem;
 }
@@ -150,7 +150,7 @@
 .destination-all-button {
   width: 100%;
   padding: 0.7rem 0.85rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: 'Inter', sans-serif;
   background-color: transparent;
   color: var(--accent-foreground);
