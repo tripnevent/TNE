@@ -2,9 +2,9 @@
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
   width: 100%;
-  background-color: #000; /* Black background */
+  background-color: #000;
   color: #fff;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .navbar-logo-img {
-  height: 3rem; /* Adjust to fit */
+  height: 3rem;
   width: 3rem;
   object-fit: cover;
   border-radius: 50%;
@@ -58,18 +58,13 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
-  position: relative;
   transition: color 0.3s ease;
 }
 
-
-
-.navbar-link:hover::after,
-.navbar-link.active::after {
-  width: 100%;
+.navbar-link:hover {
+  color: #ccc;
 }
 
-/* Show links on desktop */
 @media (min-width: 768px) {
   .navbar-links {
     display: flex;
@@ -83,6 +78,7 @@
   border: none;
   color: #fff;
   cursor: pointer;
+  z-index: 105;
 }
 
 .navbar-menu-button:hover {
@@ -97,19 +93,79 @@
 
 /* ---------------- MOBILE NAVIGATION ---------------- */
 .navbar-mobile {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #000;
-  padding: 1rem 0;
+  justify-content: center;
+  gap: 1.5rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.4s ease forwards;
+  z-index: 104;
 }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- CLOSE BUTTON ANIMATION ---------------- */
+.navbar-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 110;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Subtle hover animation (rotation + fade) */
+.navbar-close:hover {
+  transform: rotate(90deg) scale(1.1);
+  color: #ccc;
+  opacity: 0.8;
+}
+
 
 .navbar-mobile .navbar-link {
   width: 100%;
   text-align: center;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
   font-size: 1rem;
   color: #fff;
 }
 
+/* Hide message icon on mobile */
+.navbar-mobile .navbar-link svg {
+  display: none;
+}
 
+/* ---------------- SOCIAL ICONS ---------------- */
+.navbar-social {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.navbar-social a {
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-social a:hover {
+  transform: scale(1.2);
+  color: #ccc;
+}
