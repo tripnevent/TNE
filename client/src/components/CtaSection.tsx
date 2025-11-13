@@ -40,7 +40,10 @@ const CtaSection: React.FC<CtaSectionProps> = ({
                     ? 'cta-button-outline'
                     : 'cta-button-solid'
                 }`}
-                onClick={primaryButton.onClick}
+                onClick={() => {
+                  primaryButton.onClick?.();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
               >
                 {primaryButton.label}
               </button>
@@ -52,7 +55,10 @@ const CtaSection: React.FC<CtaSectionProps> = ({
                     ? 'cta-button-outline'
                     : 'cta-button-solid'
                 }`}
-                onClick={secondaryButton.onClick}
+                onClick={() => {
+                  secondaryButton.onClick?.();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
               >
                 {secondaryButton.label}
               </button>
