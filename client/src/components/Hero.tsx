@@ -1,18 +1,22 @@
-import { useLocation } from "wouter";
-import "./hero.css";
+import { useLocation } from 'wouter';
+import './hero.css';
 
 export default function Hero() {
   const [location, navigate] = useLocation();
 
-  // Function to handle button click, will navigate to a placeholder route
   const handleButtonClick = () => {
-    // In a real application, this would navigate to the start of the journey/booking page
-    console.log("Navigating to start journey...");
-    // navigate("/start-journey"); // Placeholder navigation
+    console.log('Navigating to start journey...');
+    // navigate("/start-journey");
   };
 
   return (
     <section className="hero">
+      {/* Background Video */}
+      <video className="hero-video" autoPlay loop muted playsInline>
+        <source src="/finalhero.mov" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       {/* Animated Grain Overlay */}
       <div className="grain-overlay"></div>
 
@@ -30,9 +34,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-scroll-indicator">
-        SCROLL TO EXPLORE
-      </div>
+      <div className="hero-scroll-indicator">SCROLL TO EXPLORE</div>
     </section>
   );
 }
