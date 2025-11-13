@@ -1,4 +1,5 @@
 import React, { useRef, useState, useMemo } from 'react';
+import { useLocation } from 'wouter'; // ✅ Import from wouter
 import './ourservices.css';
 
 interface Service {
@@ -97,8 +98,8 @@ const continents = [
 const OurServices: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [location, navigate] = useLocation(); // ✅ Hook for navigation
 
-  // UseMemo for optimized filtering
   const filteredServices = useMemo(
     () =>
       activeFilter === 'All'
@@ -167,7 +168,16 @@ const OurServices: React.FC = () => {
             <div className="service-overlay">
               <h3 className="service-title">{service.title}</h3>
               <p className="service-subtitle">{service.subtitle}</p>
-              <button className="service-btn">{service.button}</button>
+              {/* ✅ Button navigates to /contact page */}
+              <button
+                className="service-btn"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  navigate('/contact');
+                }}
+              >
+                {service.button}
+              </button>
             </div>
           </article>
         ))}
