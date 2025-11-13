@@ -1,17 +1,37 @@
 /* ========================================
-   Compact & Cinematic Layout (All)
+   Global Cinematic & Unified Style
    ======================================== */
 
-/* --- Page Grid Adjustments --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #000;
+  --foreground: #fff;
+  --muted-foreground: #d6d6d6;
+  --accent-foreground: #fff;
+  --border: #333;
+  --background: #000;
+  --card: #0a0a0a;
+  --muted: #1a1a1a;
+}
+
+/* ========================================
+   DESTINATIONS PAGE
+   ======================================== */
+
 .destinations-all-grid-section {
   flex: 1;
-  padding: 3rem 1rem;
-  background-color: #000;
+  padding: 4rem 1rem;
+  background-color: var(--background);
 }
 
 @media (min-width: 640px) {
   .destinations-all-grid-section {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
   }
 }
 
@@ -19,49 +39,45 @@
   max-width: 96rem;
   margin: 0 auto;
   display: grid;
-  gap: 1.5rem;
+  gap: 1.75rem;
   grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
   .destinations-all-grid-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.75rem;
   }
 }
 
 @media (min-width: 1024px) {
   .destinations-all-grid-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
   }
 }
 
 /* --- Destination Card --- */
 .destination-all-card {
-  background-color: #000000;
+  background-color: var(--card);
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .destination-all-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
-/* --- Image Section --- */
+/* --- Image --- */
 .destination-all-image {
   position: relative;
   width: 100%;
-  height: 13rem;
+  height: 14rem;
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color: var(--muted);
 }
 
 .destination-all-img {
@@ -69,105 +85,263 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(0.85);
-  transition:
-    transform 0.5s ease,
-    filter 0.5s ease;
+  transition: transform 0.6s ease, filter 0.6s ease;
 }
 
 .destination-all-card:hover .destination-all-img {
-  transform: scale(1.06);
+  transform: scale(1.07);
   filter: brightness(1);
 }
 
-/* --- Card Content --- */
+/* --- Content --- */
 .destination-all-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-grow: 1;
-  padding: 1.25rem 1rem;
-  background-color: #000000;
+  padding: 1.5rem 1.25rem;
+  background-color: var(--color-black);
 }
 
 .destination-all-title {
   font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
   font-weight: 700;
-  font-size: 1.5rem;
-  color: #fff;
-  margin-bottom: 0.4rem;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
 }
 
 .destination-all-tagline {
+  font-family: 'Playfair Display', serif;
   font-size: 1rem;
-  color: #ffffff;
-  margin-bottom: 0.8rem;
-  font-style: 'Playfair Display', serif;
+  color: var(--muted-foreground);
+  margin-bottom: 0.75rem;
   letter-spacing: 0.5px;
 }
 
 .destination-all-description {
-  font-size: 1.1rem;
-  color: #ffffff;
-  line-height: 1.5;
-  font-style: 'Inter', sans-serif;
-  margin-bottom: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
   flex-grow: 1;
+  margin-bottom: 0.75rem;
 }
 
 .destination-all-price {
-  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  font-style: 'Inter', sans-serif;
-  color: #fff;
+  color: var(--foreground);
   margin-bottom: 0.5rem;
 }
 
 .destination-all-info {
   display: flex;
-  font-style: 'Inter', sans-serif;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--border);
   padding-top: 0.6rem;
-  margin-top: auto;
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
 }
 
 /* --- Button --- */
 .destination-all-button {
   width: 100%;
-  padding: 0.6rem 0.75rem;
+  padding: 0.7rem 0.85rem;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
   background-color: transparent;
-  color: #fff;
+  color: var(--accent-foreground);
   border: 1px solid #fff;
   cursor: pointer;
-  border-radius: 0 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: auto;
+  transition: all 0.3s ease;
 }
 
 .destination-all-button:hover {
   background-color: #fff;
   color: #000;
-  transform: translateY(-1.5px);
 }
 
-/* --- Responsive Tweaks --- */
-@media (max-width: 480px) {
-  .destination-all-title {
-    font-size: 1.1rem;
-  }
+/* ========================================
+   EXPERIENCES PAGE (MATCHED STYLE)
+   ======================================== */
 
-  .destination-all-description {
-    font-size: 0.8rem;
-  }
+.experiences-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
 
-  .destination-all-button {
-    padding: 0.55rem 0.7rem;
+/* --- Header --- */
+.experiences-header-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: var(--color-black);
+}
+
+.experiences-header-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.experiences-header-section p {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+}
+
+/* --- Grid --- */
+.experiences-grid-section {
+  flex: 1;
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .experiences-grid-section {
+    padding: 5rem 2rem;
   }
+}
+
+.experiences-grid-container {
+  max-width: 96rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .experiences-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .experiences-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Experience Card --- */
+.experience-card {
+  background-color: var(--card);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Image --- */
+.experience-image {
+  height: 14rem;
+  background-color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-image-text {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+}
+
+/* --- Content --- */
+.experience-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.25rem;
+  background-color: var(--color-black);
+}
+
+.experience-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.experience-duration {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--foreground);
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+  margin-top: 1rem;
+}
+
+/* --- Button --- */
+.experience-button {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  color: var(--accent-foreground);
+  border: 1px solid #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.experience-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* --- CTA Section --- */
+.experiences-cta-section {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: var(--color-black);
+}
+
+.experiences-cta-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+}
+
+.experiences-cta-text {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+}
+
+/* --- Destination Page Button --- */
+.destination-all-button {
+  border-radius: 0 !important;
+}
+
+/* --- Experience Page Button --- */
+.experience-button {
+  border-radius: 0 !important;
 }
