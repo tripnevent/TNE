@@ -43,7 +43,10 @@ export default function Navigation() {
           {navItems.map((item) => (
             <button
               key={item.href}
-              onClick={() => navigate(item.href)}
+              onClick={() => {
+                navigate(item.href);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
               className={`navbar-link ${isActive(item.href) ? 'active' : ''}`}
             >
               {item.label}
@@ -68,6 +71,7 @@ export default function Navigation() {
               key={item.href}
               onClick={() => {
                 navigate(item.href);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
                 setIsOpen(false);
               }}
               className={`navbar-link ${isActive(item.href) ? 'active' : ''}`}
@@ -79,22 +83,38 @@ export default function Navigation() {
           {/* Social Icons */}
           <div className="navbar-social">
             <a
-               href="https://wa.me/919007000777"
+              href="https://wa.me/919007000777"
               target="_blank"
               rel="noreferrer"
             >
               <FaWhatsapp size={20} />
             </a>
-            <a   href="https://www.instagram.com/tripandevent/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.instagram.com/tripandevent/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaInstagram size={20} />
             </a>
-            <a   href="https://www.youtube.com/@tripandevent?si=Mvgxlpary9tfHTBs" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.youtube.com/@tripandevent?si=Mvgxlpary9tfHTBs"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaYoutube size={20} />
             </a>
-            <a  href="https://www.linkedin.com/company/trip-and-event/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/company/trip-and-event/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaLinkedin size={20} />
             </a>
-            <a href="https://www.facebook.com/share/1Bw8BXmaS2/"target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/share/1Bw8BXmaS2/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaFacebook size={20} />
             </a>
           </div>
