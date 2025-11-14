@@ -17,7 +17,7 @@ const services: Service[] = [
     title: 'CineTrip',
     subtitle: 'The Ultimate Cinematic Travel Experience',
     button: 'Explore CineTrip',
-    image: '/cinetrip.jpg',
+    image: '/cinetripoffering/cinetrip.jpg',
     continent: 'Global',
   },
   {
@@ -25,7 +25,7 @@ const services: Service[] = [
     title: 'Pre-Wedding Shoot',
     subtitle: 'Cinematic storytelling before your big day',
     button: 'View Packages',
-    image: '/prewedding.png',
+    image: '/cinetripoffering/prewedding.jpg',
     continent: 'Asia',
   },
   {
@@ -33,7 +33,7 @@ const services: Service[] = [
     title: 'Honeymoon Movie',
     subtitle: 'Capture your love story across destinations',
     button: 'Plan Your Story',
-    image: '/honeymoon.jpg',
+    image: '/cinetripoffering/honeymoonmovie.jpg',
     continent: 'Europe',
   },
   {
@@ -41,7 +41,7 @@ const services: Service[] = [
     title: 'Music Album Trip',
     subtitle: 'Travel and create your personal music video',
     button: 'Create Your Album',
-    image: '/musicalbum.jpg',
+    image: '/cinetripoffering/musicalbumtrip.jpg',
     continent: 'Asia',
   },
   {
@@ -49,7 +49,7 @@ const services: Service[] = [
     title: 'Love Story CineTrip',
     subtitle: 'Your romantic journey filmed like a movie',
     button: 'Start Your Journey',
-    image: '/lovestory.jpg',
+    image: '/cinetripoffering/lovestorycinetrip.jpg',
     continent: 'Asia',
   },
   {
@@ -57,7 +57,7 @@ const services: Service[] = [
     title: 'Anniversary',
     subtitle: 'Celebrate milestones with cinematic coverage',
     button: 'Celebrate With Us',
-    image: '/anniversary.jpg',
+    image: '/cinetripoffering/anniversary.jpg',
     continent: 'Europe',
   },
   {
@@ -65,7 +65,7 @@ const services: Service[] = [
     title: 'Birthday Party',
     subtitle: 'Unforgettable cinematic celebrations',
     button: 'Plan Your Party',
-    image: '/birthday.jpg',
+    image: '/cinetripoffering/birthdayparty.jpg',
     continent: 'Asia',
   },
   {
@@ -73,7 +73,7 @@ const services: Service[] = [
     title: 'Personal Events',
     subtitle: 'Corporate events & special occasions',
     button: 'Contact Us',
-    image: '/events.jpg',
+    image: '/cinetripoffering/events.jpg',
     continent: 'North America',
   },
   {
@@ -81,7 +81,7 @@ const services: Service[] = [
     title: 'Yacht Experiences',
     subtitle: 'Luxury yacht shoots & exclusive film journeys',
     button: 'Explore Luxury',
-    image: '/yacht.jpg',
+    image: '/cinetripoffering/yachtexperiences.jpg',
     continent: 'Middle East',
   },
 ];

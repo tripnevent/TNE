@@ -18,7 +18,7 @@ export default function Yacht() {
         "Sunset deck seating",
         "Gourmet dining options",
       ],
-      image: "/yacht.jpg",
+      image: "/yachtpage/yacht.jpg",
     },
     {
       name: "Adventure & Watersports",
@@ -29,14 +29,14 @@ export default function Yacht() {
         "Snorkeling spots",
         "Expert guides onboard",
       ],
-      image: "/Adventurewatersports.jpg",
+      image: "/yachtpage/Adventurewatersports.jpg",
     },
     {
       name: "Romantic Escape",
       description:
         "A dreamy yacht experience ideal for couples, featuring sunset sails, cozy seating, and private cabins.",
       highlights: ["Private cabins", "Romantic dinner setup", "Sunset sail"],
-      image: "/Romanticescape.jpg",
+      image: "/yachtpage/Romanticescape.jpg",
     },
   ];
 

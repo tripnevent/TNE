@@ -2,12 +2,12 @@ import React from 'react';
 import './TrendingDestinations.css';
 
 const places = [
-  { name: 'Kerala', price: '62,500', image: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', className: 'card-mauritius' },
-  { name: 'Dubai', price: '37,500', image: '/dubai.jpg', className: 'card-thailand' },
-  { name: 'Andaman', price: '43,854', image: '/andaman.jpg', className: 'card-maldives' },
-  { name: 'Bali', price: '48,750', image: '/bali.jpg', className: 'card-malaysia' },
-  { name: 'Phuket', price: '30,000', image: '/phuket.jpg', className: 'card-srilanka' },
-  { name: 'Singapore', price: '25,330', image: '/singapore.jpg', className: 'card-seychelles' },
+  { name: 'Kerala', price: '62,500', image: '/trendingdestination/kerala.jpg', className: 'card-mauritius' },
+  { name: 'Dubai', price: '37,500', image: '/trendingdestination/dubai.jpg', className: 'card-thailand' },
+  { name: 'Andaman', price: '43,854', image: '/trendingdestination/andaman.jpg', className: 'card-maldives' },
+  { name: 'Bali', price: '48,750', image: '/trendingdestination/bali.jpg', className: 'card-malaysia' },
+  { name: 'Thailand', price: '30,000', image: '/trendingdestination/phuket.jpg', className: 'card-srilanka' },
+  { name: 'Singapore', price: '25,330', image: '/trendingdestination/singapore.jpg', className: 'card-seychelles' },
 ];
 
 const TrendingDestinations: React.FC = () => {

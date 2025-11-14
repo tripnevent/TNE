@@ -13,7 +13,7 @@ export default function Hero() {
     <section className="hero">
       {/* Background Video */}
       <video className="hero-video" autoPlay loop muted playsInline>
-        <source src="/finalhero.mov" type="video/mp4" />
+        <source src="/herovideo/finalhero.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

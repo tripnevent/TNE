@@ -4,3 +4,4 @@ node_modules/
 # Vite build output
 dist/
 build/
+node_modules

@@ -9,12 +9,12 @@ interface Destination {
 }
 
 const destinations: Destination[] = [
-  { id: 1, subtitle: 'Luxury meets cinematic magic', title: 'Dubai', image: '/dubai.jpg' },
-  { id: 2, subtitle: 'Modern marvels & cultural', title: 'Phuket', image: '/phuket.jpg' },
-  { id: 3, subtitle: 'Paradise on Earth', title: 'Bali', image: '/bali.jpg' },
-  { id: 4, subtitle: 'Island of the Gods', title: 'Singapore', image: '/singapore.jpg' },
-  { id: 5, subtitle: 'Timeless elegance & romance', title: 'Kerala', image: '/Kerala.jpg' },
-  { id: 6, subtitle: 'Heaven on Earth', title: 'Andaman', image: '/andaman.jpg' },
+  { id: 1, subtitle: 'Luxury meets cinematic magic', title: 'Dubai', image: '/acrosstheglobe/dubai.jpg' },
+  { id: 2, subtitle: 'Modern marvels & cultural', title: 'Phuket', image: '/acrosstheglobe/phuket.jpg' },
+  { id: 3, subtitle: 'Paradise on Earth', title: 'Bali', image: '/acrosstheglobe/bali.jpg' },
+  { id: 4, subtitle: 'Island of the Gods', title: 'Singapore', image: '/acrosstheglobe/singapore.jpg' },
+  { id: 5, subtitle: 'Timeless elegance & romance', title: 'Kerala', image: '/acrosstheglobe/kerala.jpg' },
+  { id: 6, subtitle: 'Heaven on Earth', title: 'Andaman', image: '/acrosstheglobe/andaman.jpg' },
 ];
 
 const AcrossTheGlobe: React.FC = () => {
