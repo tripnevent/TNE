@@ -86,7 +86,7 @@ export default function DestinationsPage() {
               <div key={dest.name} className="destination-page-card">
                 <div className="destination-page-image">
                   <img
-                    src={`/${dest.name.toLowerCase()}.jpg`}
+                    src={`/destinationpage/${dest.name.toLowerCase()}.jpg`}
                     alt={`Beautiful view of ${dest.name}`}
                     className="destination-page-img"
                     loading="lazy"
