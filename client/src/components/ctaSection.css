@@ -105,27 +105,6 @@
   color: #000;
 }
 
-/* Variant: Experience-style button */
-.experiences-page-button {
-  width: 100%;
-  max-width: 250px;
-  padding: 0.75rem 1rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: 1px solid #fff !important;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-}
-
-.experiences-page-button:hover {
-  background-color: #fff;
-  color: #000;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .cta-title {
@@ -139,11 +118,5 @@
   .cta-buttons {
     flex-direction: column;
     gap: 0.8rem;
-  }
-
-  .cta-button,
-  .experiences-page-button {
-    width: 100%;
-    max-width: 100%;
   }
 }
