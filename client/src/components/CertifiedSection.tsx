@@ -9,18 +9,18 @@ const logos = [
     label: 'India',
   },
   {
-    src: '/gohappy-logo.jpg',
+    src: '/logos/gohappylogo.png',
     alt: 'GoHappy Tourism LLC',
     label: 'Dubai, UAE',
   },
   {
-    src: '/tripmedia-logo.jpg',
+    src: '/logos/tripmedia-logo.jpg',
     alt: 'TripMedia Production LLC',
     label: 'Dubai, UAE',
     rounded: true,
   },
   {
-    src: '/iata-logo.png',
+    src: '/logos/iata-logo.png',
     alt: 'IATA Certified - 14035136',
     label: 'ID: 14035136',
     invert: true,

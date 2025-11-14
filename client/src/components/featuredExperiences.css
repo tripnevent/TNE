@@ -21,7 +21,7 @@
 }
 
 .featured-experiences-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   font-size: 2.5rem;
   color: #fff;
@@ -30,7 +30,7 @@
 }
 
 .featured-experiences-subtitle {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   color: #bfbfbf; /* soft gray tone */
@@ -98,10 +98,10 @@
 
 /* Dark overlay for better contrast */
 .featured-experience-image::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15));
 }
 
 /* ----------- Card Content ----------- */
@@ -116,7 +116,7 @@
 
 /* Card Title */
 .featured-experience-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   font-size: 1.5rem;
   color: #fff;
@@ -125,7 +125,7 @@
 
 /* Description */
 .featured-experience-description {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   color: #bfbfbf;
   line-height: 1.5;
@@ -134,7 +134,7 @@
 
 /* Duration */
 .featured-experience-duration {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: #e0e0e0;
@@ -143,7 +143,7 @@
 
 /* ----------- Button ----------- */
 .featured-experience-button {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 0.85rem;
   color: #fff;
@@ -189,4 +189,12 @@
   .featured-experience-button {
     font-size: 0.8rem;
   }
+}
+
+.featured-experience-video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

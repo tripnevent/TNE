@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { useLocation } from "wouter";
-import "./featuredExperiences.css";
+import { useEffect } from 'react';
+import { useLocation } from 'wouter';
+import './featuredExperiences.css';
 
 // ✅ Declare YouTube API types globally so TS recognizes them
 declare global {
@@ -15,38 +15,38 @@ export default function FeaturedExperiences() {
 
   const experiences = [
     {
-      id: "frAVP2fjCnU",
+      id: 'frAVP2fjCnU',
       start: 6,
       end: 52,
-      title: "Music Album Trip",
+      title: 'Music Album Trip',
       description:
-        "Create your personal music video while traveling to exotic destinations",
-      duration: "5 Nights / 6 Days",
+        'Create your personal music video while traveling to exotic destinations',
+      duration: '5 Nights / 6 Days',
     },
     {
-      id: "matrHEYEaEU",
+      id: 'matrHEYEaEU',
       start: 3,
       end: 22,
-      title: "Pre-Wedding Shoot",
+      title: 'Pre-Wedding Shoot',
       description:
-        "Cinematic pre-wedding films in the most romantic locations around the world",
-      duration: "5 Nights / 6 Days",
+        'Cinematic pre-wedding films in the most romantic locations around the world',
+      duration: '5 Nights / 6 Days',
     },
     {
-      id: "J1Y5QXAsp3Y",
+      id: 'sBOnQB5Q3w4',
       start: 0,
       end: null,
-      title: "Group Adventure",
+      title: 'Group Adventure',
       description:
-        "Epic group adventures captured in stunning cinematic style for unforgettable memories",
-      duration: "5 Nights / 6 Days",
+        'Epic group adventures captured in stunning cinematic style for unforgettable memories',
+      duration: '5 Nights / 6 Days',
     },
   ];
 
   useEffect(() => {
     // Load YouTube API script
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
     document.body.appendChild(tag);
 
     window.onYouTubeIframeAPIReady = () => {
@@ -105,8 +105,8 @@ export default function FeaturedExperiences() {
                 <button
                   className="featured-experience-button"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                    navigate("/contact");
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    navigate('/contact');
                   }}
                 >
                   View Details
