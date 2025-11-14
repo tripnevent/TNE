@@ -17,6 +17,7 @@ export default function ExperiencesPage() {
       duration: '5 Nights / 6 Days',
       details:
         "Perfect for musicians and artists looking to create a cinematic music video. We'll capture your journey and craft a professional film with breathtaking visuals.",
+      image: '/experiencepage/exp1.jpg',  
     },
     {
       title: 'Pre-Wedding Shoot',
@@ -25,6 +26,7 @@ export default function ExperiencesPage() {
       duration: '5 Nights / 6 Days',
       details:
         'Celebrate your love story with a cinematic pre-wedding film. Our crew will capture your chemistry in iconic, dreamy destinations.',
+      image: '/experiencepage/exp2.jpg',  
     },
     {
       title: 'Group Adventure',
@@ -33,6 +35,7 @@ export default function ExperiencesPage() {
       duration: '5 Nights / 6 Days',
       details:
         "Travel with your friends or family and create unforgettable memories. We'll document your entire journey with cinematic brilliance.",
+      image: '/experiencepage/exp3.jpg',   
     },
     {
       title: 'Corporate Event',
@@ -41,6 +44,7 @@ export default function ExperiencesPage() {
       duration: 'Customizable',
       details:
         'Capture your corporate gatherings, retreats, or brand experiences with polished cinematic storytelling.',
+      image: '/experiencepage/exp4.jpg',  
     },
     {
       title: 'Travel Documentary',
@@ -49,6 +53,7 @@ export default function ExperiencesPage() {
       duration: 'Customizable',
       details:
         'Get a cinematic documentary featuring voiceovers, interviews, and editorial-grade storytelling.',
+      image: '/experiencepage/exp5.jpg',   
     },
     {
       title: 'Luxury Getaway',
@@ -57,6 +62,7 @@ export default function ExperiencesPage() {
       duration: 'Customizable',
       details:
         'Experience the ultimate luxury travel with our premium cinematic film and white-glove production service.',
+      image: '/experiencepage/exp6.jpg',   
     },
   ];
 
@@ -82,10 +88,14 @@ export default function ExperiencesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: idx * 0.1 }}
               viewport={{ once: true, amount: 0.2 }}
-              // whileHover={{ scale: 1.02 }}
             >
+              {/* ✅ REPLACED ONLY THIS PART */}
               <div className="experiences-page-image">
-                <p className="experiences-page-image-text">{exp.title} Image</p>
+                <img
+                  src={exp.image}
+                  alt={exp.title}
+                  className="experiences-page-img"
+                />
               </div>
 
               <div className="experiences-page-content">
@@ -95,6 +105,7 @@ export default function ExperiencesPage() {
                 </p>
                 <p className="experiences-page-details">{exp.details}</p>
                 <div className="experiences-page-duration">{exp.duration}</div>
+
                 <button
                   className="experiences-page-button"
                   onClick={() => {
