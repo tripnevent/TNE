@@ -21,6 +21,7 @@ export default function HowItWorks() {
         'Share your vision and preferences',
         'Explore destination options',
       ],
+      image: '/vision1.jpg',
     },
     {
       step: '02',
@@ -32,6 +33,7 @@ export default function HowItWorks() {
         'Plan filming locations and schedules',
         'Arrange logistics and accommodations',
       ],
+      image: '/vision2.jpg',
     },
     {
       step: '03',
@@ -43,6 +45,7 @@ export default function HowItWorks() {
         'Capture stunning 4K footage',
         'Create memorable experiences',
       ],
+      image: '/vision3.jpg',
     },
     {
       step: '04',
@@ -54,6 +57,7 @@ export default function HowItWorks() {
         'Custom music and sound design',
         'Multiple format deliverables',
       ],
+      image: '/vision3.jpg',
     },
   ];
 
@@ -107,7 +111,7 @@ export default function HowItWorks() {
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: 'spring', stiffness: 150 }}
               >
-                <p>{item.title} Image</p>
+                <img src={item.image} alt={item.title} />
               </motion.div>
             </motion.div>
           ))}
