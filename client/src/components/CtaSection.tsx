@@ -1,10 +1,10 @@
-import React from "react";
-import "./ctaSection.css";
+import React from 'react';
+import './ctaSection.css';
 
 interface ButtonConfig {
   label: string;
   onClick?: () => void;
-  variant?: "solid" | "outline" | "experience";
+  variant?: 'solid' | 'outline' | 'experience';
 }
 
 interface CtaSectionProps {
@@ -21,18 +21,18 @@ const CtaSection: React.FC<CtaSectionProps> = ({
   secondaryButton,
 }) => {
   const sectionStyle: React.CSSProperties = {
-    backgroundColor: "#000", // fixed background
-    color: "#fff",
+    backgroundColor: '#000', // fixed background
+    color: '#fff',
   };
 
   const renderButton = (btn: ButtonConfig) => {
-    if (btn.variant === "experience") {
+    if (btn.variant === 'experience') {
       return (
         <button
           className="experiences-page-button"
           onClick={() => {
             btn.onClick?.();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
           {btn.label}
@@ -43,13 +43,11 @@ const CtaSection: React.FC<CtaSectionProps> = ({
     return (
       <button
         className={`cta-button ${
-          btn.variant === "outline"
-            ? "cta-button-outline"
-            : "cta-button-solid"
+          btn.variant === 'outline' ? 'cta-button-outline' : 'cta-button-solid'
         }`}
         onClick={() => {
           btn.onClick?.();
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
       >
         {btn.label}

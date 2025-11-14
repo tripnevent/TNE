@@ -31,7 +31,7 @@ export default function Navigation() {
         {/* Logo */}
         <div className="navbar-logo" onClick={() => navigate('/')}>
           <img
-            src="/tnegreen.jpeg"
+            src="/logos/tnegreenlogo.jpeg"
             alt="Trip & Event Logo"
             className="navbar-logo-img"
           />
