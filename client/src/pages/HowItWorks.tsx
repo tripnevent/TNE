@@ -57,7 +57,7 @@ export default function HowItWorks() {
         'Custom music and sound design',
         'Multiple format deliverables',
       ],
-      image: '/vision3.jpg',
+      image: '/vision4.jpg',
     },
   ];
 
