@@ -74,7 +74,7 @@ export default function DestinationsPage() {
         <Navigation />
 
         <Headeruse
-          title="All Destinations"
+          title="Across The Globe"
           subtitle="Explore cinematic journeys around the world"
           backgroundColor="#000"
           textColor="#fff"
