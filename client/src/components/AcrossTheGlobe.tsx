@@ -36,8 +36,8 @@ const destinations: Destination[] = [
   {
     id: 5,
     subtitle: 'Timeless elegance & romance',
-    title: 'Kerala',
-    image: '/acrosstheglobe/kerala.jpg',
+    title: 'Europe',
+    image: '/acrosstheglobe/europe.jpg',
   },
   {
     id: 6,

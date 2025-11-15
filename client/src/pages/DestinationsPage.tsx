@@ -16,7 +16,7 @@ export default function DestinationsPage() {
       name: 'Dubai',
       tagline: 'Luxury meets cinematic magic',
       packages: 12,
-      price: '₹85,000',
+      price: '₹49,999',
       description:
         'Experience the glittering skyline of Dubai with our cinematic travel packages.',
     },
@@ -24,7 +24,7 @@ export default function DestinationsPage() {
       name: 'Singapore',
       tagline: 'Modern marvels & cultural wonders',
       packages: 8,
-      price: '₹75,000',
+      price: '₹49,999',
       description:
         'Explore the fusion of tradition and modernity in Singapore.',
     },
@@ -32,7 +32,7 @@ export default function DestinationsPage() {
       name: 'Maldives',
       tagline: 'Paradise on Earth',
       packages: 10,
-      price: '₹1,25,000',
+      price: '₹85,000',
       description:
         'Capture the pristine beauty of the Maldives with crystal clear waters.',
     },
@@ -40,14 +40,14 @@ export default function DestinationsPage() {
       name: 'Bali',
       tagline: 'Island of the Gods',
       packages: 9,
-      price: '₹65,000',
+      price: '₹34,999',
       description: 'Discover the spiritual and natural beauty of Bali.',
     },
     {
       name: 'Europe',
       tagline: 'Timeless elegance & romance',
       packages: 15,
-      price: '₹2,45,000',
+      price: '₹99,999',
       description:
         'Journey through the historic cities and landscapes of Europe.',
     },
@@ -55,7 +55,7 @@ export default function DestinationsPage() {
       name: 'Kashmir',
       tagline: 'Heaven on Earth',
       packages: 7,
-      price: '₹45,000',
+      price: '₹44,999',
       description:
         "Experience the breathtaking beauty of Kashmir's valleys and mountains.",
     },
