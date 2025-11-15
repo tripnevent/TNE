@@ -47,7 +47,7 @@ const destinations: Destination[] = [
   },
   {
     id: 7,
-    subtitle: '',
+    subtitle: 'Land of Fire and Ice',
     title: 'Kazakhstan',
     image: '/acrosstheglobe/kazakhstan.jpg',
   }
