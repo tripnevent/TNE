@@ -4,37 +4,37 @@ import './TrendingDestinations.css';
 const places = [
   {
     name: 'Kerala',
-    price: '62,500',
+    price: '28,500',
     image: '/trendingdestination/kerala1.jpg',
     className: 'card-mauritius',
   },
   {
     name: 'Dubai',
-    price: '37,500',
+    price: '49,900',
     image: '/trendingdestination/dubai1.jpg',
     className: 'card-thailand',
   },
   {
     name: 'Andaman',
-    price: '43,854',
+    price: '29,999',
     image: '/trendingdestination/andaman1.jpg',
     className: 'card-maldives',
   },
   {
     name: 'Bali',
-    price: '48,750',
+    price: '34,999',
     image: '/trendingdestination/bali1.jpg',
     className: 'card-malaysia',
   },
   {
     name: 'Thailand',
-    price: '30,000',
+    price: '34,999',
     image: '/trendingdestination/phuket1.jpg',
     className: 'card-srilanka',
   },
   {
     name: 'Singapore',
-    price: '25,330',
+    price: '49,999',
     image: '/trendingdestination/singapore1.jpg',
     className: 'card-seychelles',
   },

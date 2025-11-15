@@ -9,11 +9,11 @@ type FAQItem = {
 const faqData: FAQItem[] = [
   {
     q: "What is included in a Cinematrip package?",
-    a: "Our packages include professional cinematography, drone footage, editing, color grading, and a final 4K film. Accommodations and meals are customizable based on your package.",
+    a: "Our packages include professional cinematography, editing, color grading, and a final 4K film. Accommodations and meals are customizable based on your package.",
   },
   {
     q: "How far in advance should I book?",
-    a: "We recommend booking at least 2-3 months in advance to ensure availability and allow time for proper planning and preparation.",
+    a: "We recommend booking at least 10 days in advance to ensure availability and allow time for proper planning and preparation.",
   },
   {
     q: "Can I customize my itinerary?",
