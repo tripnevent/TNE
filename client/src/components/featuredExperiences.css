@@ -198,3 +198,51 @@
   top: 0;
   left: 0;
 }
+.yt-volume-control {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.featured-experience-image:hover .yt-volume-control {
+  opacity: 1;
+}
+
+.yt-volume-control {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+}
+
+.featured-experience-image:hover .yt-volume-control {
+  opacity: 1;
+}
+
+.yt-mute-btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 6px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.yt-volume-slider {
+  width: 85px;
+  height: 4px;
+  cursor: pointer;
+}
+
