@@ -22,8 +22,8 @@ export default function Hero() {
 
       {/* Content */}
       <div className="hero-container">
-        <h1 className="hero-title">TRIP AND EVENT</h1>
-        <p className="hero-subtitle">CURATED LUXURY TRAVEL EXPERIENCES</p>
+        <h1 className="hero-title">WORLD FIRST CINEMATRIP BRAND</h1>
+        <p className="hero-subtitle">WE don't just design packages, We turn your holiday into real time movies.</p>
 
         <div className="hero-buttons">
           <button className="hero-button" onClick={handleButtonClick}>
