@@ -16,14 +16,16 @@ export default function Hero() {
         <source src="/herovideo/finalhero.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
       {/* Grain & Overlay handled in CSS */}
       <div className="grain-overlay"></div>
 
       {/* Content */}
       <div className="hero-container">
         <h1 className="hero-title">WORLD FIRST CINEMATRIP BRAND</h1>
-        <p className="hero-subtitle">We don't just design packages, We turn your holiday into real time movies.</p>
+        <p className="hero-subtitle">
+          We don't just design packages, We turn your holiday into real time
+          movies.
+        </p>
 
         <div className="hero-buttons">
           <button className="hero-button" onClick={handleButtonClick}>
