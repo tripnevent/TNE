@@ -20,12 +20,12 @@ export default function ExperiencesPage() {
       image: '/experiencepage/exp1.jpg',  
     },
     {
-      title: 'Pre-Wedding Shoot',
+      title: 'Wedding Shoot',
       description:
-        'Cinematic pre-wedding films in the most romantic locations.',
+        'Cinematic wedding films in the most romantic locations.',
       duration: '5 Nights / 6 Days',
       details:
-        'Celebrate your love story with a cinematic pre-wedding film. Our crew will capture your chemistry in iconic, dreamy destinations.',
+        'Celebrate your love story with a cinematic wedding film. Our crew will capture your chemistry in iconic, dreamy destinations.',
       image: '/experiencepage/exp2.jpg',  
     },
     {

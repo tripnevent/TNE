@@ -22,7 +22,7 @@ const services: Service[] = [
   },
   {
     id: 2,
-    title: 'Pre-Wedding Shoot',
+    title: 'Wedding Shoot',
     subtitle: 'Cinematic storytelling before your big day',
     button: 'View Packages',
     image: '/cinetripoffering/prewedding.jpg',

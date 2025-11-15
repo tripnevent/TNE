@@ -27,9 +27,9 @@ export default function FeaturedExperiences() {
       id: 'matrHEYEaEU',
       start: 3,
       end: 22,
-      title: 'Pre-Wedding Shoot',
+      title: 'Wedding Shoot',
       description:
-        'Cinematic pre-wedding films in the most romantic locations around the world',
+        'Cinematic wedding films in the most romantic locations around the world',
       duration: '5 Nights / 6 Days',
     },
     {
