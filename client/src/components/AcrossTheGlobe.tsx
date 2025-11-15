@@ -45,6 +45,12 @@ const destinations: Destination[] = [
     title: 'Andaman',
     image: '/acrosstheglobe/andaman.jpg',
   },
+  {
+    id: 7,
+    subtitle: '',
+    title: 'Kazakhstan',
+    image: '/acrosstheglobe/kazakhstan.jpg',
+  }
 ];
 
 const AcrossTheGlobe: React.FC = () => {
